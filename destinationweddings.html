@@ -1,0 +1,1062 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<title>Destination Weddings</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Welcome to Experience Morocco, a leading provider of curated and authentic travels across Morocco">
+<meta property="og:image" content="http://experiencemorocco.com/imagesNew/casa.jpg">
+<meta property="og:description" content="Welcome to Experience Morocco, a leading provider of curated and authentic travels across Morocco">
+
+<!-- 	|| START CSS FILES ||		-->
+<link rel="stylesheet" href="http://experiencemorocco.com/cssNew/bootstrap.css">
+<!-- <link rel="stylesheet" href="http://experiencemorocco.com/cssNew/global.css"> -->
+<link rel="stylesheet" href="http://experiencemorocco.com/cssNew/global-weddings.css">
+<link href="http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,500italic,700,700italic,900,900italic" rel="stylesheet" type="text/css">
+<link href="http://experiencemorocco.com/cssNew/jquery.datetimepicker.css" rel="stylesheet">
+<link href="http://experiencemorocco.com/cssNew/move.css" rel="stylesheet">
+<link rel="shortcut icon" type="image/x-icon" href="http://experiencemorocco.com/imgNew/favicon_experience.ico">
+
+<!--<link rel="stylesheet" type="text/css" href="cssNew/jquery.parascroll.css">-->
+
+<!-- 	|| START js FILES  ||		-->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://experiencemorocco.com/jsNew/parallax.js"></script>
+<script src="http://experiencemorocco.com/jsNew/bootstrap.js"></script>
+<script src="http://experiencemorocco.com/jsNew/jquery.backstretch.min.js"></script>
+<script type="text/javascript" src="http://experiencemorocco.com/jsNew/waypoints.min.js"></script>
+<script type="text/javascript" src="http://experiencemorocco.com/jsNew/script.js"></script>
+<script src="http://experiencemorocco.com/jsNew/validate.js" type="text/javascript"></script>
+<!-- Add mousewheel plugin (this is optional) -->
+	<script type="text/javascript" src="http://experiencemorocco.com/libNew/jquery.mousewheel-3.0.6.pack.js"></script>
+
+	<!-- Add fancyBox main JS and CSS files -->
+	<script type="text/javascript" src="http://experiencemorocco.com/source/jquery.fancybox.js?v=2.1.5"></script>
+	<link rel="stylesheet" type="text/css" href="http://experiencemorocco.com/source/jquery.fancybox.css?v=2.1.5" media="screen">
+
+	<!-- Add Button helper (this is optional) -->
+	<link rel="stylesheet" type="text/css" href="http://experiencemorocco.com/source/helpers/jquery.fancybox-buttons.css?v=1.0.5">
+	<script type="text/javascript" src="http://experiencemorocco.com/source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+
+	<!-- Add Thumbnail helper (this is optional) -->
+	<link rel="stylesheet" type="text/css" href="http://experiencemorocco.com/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7">
+	<script type="text/javascript" src="http://experiencemorocco.com/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+
+	<!-- Add Media helper (this is optional) -->
+	<script type="text/javascript" src="http://experiencemorocco.com/source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+
+<script type="text/javascript" src="http://experiencemorocco.com/jsNew/jquery.datetimepicker.js"></script>
+<script type="text/javascript" src="http://experiencemorocco.com/jsNew/scripts.js"></script>
+<script type="text/javascript" src="http://experiencemorocco.com/jsNew/move.js"></script>
+<script type="text/javascript" src="http://experiencemorocco.com/jsNew/jquery.scrollto.js"></script>
+
+<script src="https://www.google.com/recaptcha/api.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+    ///Code Scroll to hightlight menu
+/*$(window).scroll(function(){
+            var window_top = $(window).scrollTop() + 150; // the "12" should equal the margin-top value for nav.stick
+            var div_top = $('.navbar-header').offset().top;
+                if (window_top > div_top) {
+                    $('nav').addClass('stick');
+                } else {
+                    $('nav').removeClass('stick');
+                }
+        });*/
+        
+        
+        /**
+         * This part causes smooth scrolling using scrollto.js
+         * We target all a tags inside the nav, and apply the scrollto.js to it.
+         */
+        /*$("nav a").click(function(evn){
+            evn.preventDefault();
+            $('html,body').scrollTo(this.hash, this.hash); 
+        });
+        
+        
+        
+        /**
+         * This part handles the highlighting functionality.
+         * We use the scroll functionality again, some array creation and 
+         * manipulation, class adding and class removing, and conditional testing
+         */
+        var aChildren = $("nav li").children(); // find the a children of the list items
+        var aArray = []; // create the empty aArray
+        for (var i=0; i < aChildren.length; i++) {    
+            var aChild = aChildren[i];
+            var ahref = $(aChild).attr('href');
+            aArray.push(ahref);
+        } // this for loop fills the aArray with attribute href values
+        
+        $(window).scroll(function(){
+            var windowPos = $(window).scrollTop(); // get the offset of the window from the top of page
+            var windowHeight = $(window).height(); // get the height of the window
+            var docHeight = $(document).height();
+            
+            for (var i=0; i < aArray.length; i++) {
+                var theID = aArray[i];
+                var divPos = $(theID).offset().top; // get the offset of the div from the top of page
+                var divHeight = $(theID).height(); // get the height of the div in question
+                if (windowPos >= divPos && windowPos < (divPos + divHeight)) {
+
+                    $("a[href='" + theID + "']").addClass("nav-active");
+                } else {
+                    $('.navbar-nav li a').css("color",'#5b6064');
+                    $("a[href='" + theID + "']").removeClass("nav-active");
+                }
+            }
+            
+            if(windowPos + windowHeight == docHeight) {
+                if (!$("nav li:last-child a").hasClass("nav-active")) {
+                    var navActiveCurrent = $(".nav-active").attr("href");
+                    $("a[href='" + navActiveCurrent + "']").removeClass("nav-active");
+                    $("nav li:last-child a").addClass("nav-active");
+                }
+            }
+        });
+
+    ///Code Scroll to hightlight menu
+		$(window).scroll(function(){  
+		    posScroll = $(document).scrollTop();  
+		    if(posScroll >=550)   
+		        $('.scrollTo').fadeIn(600);  
+		    else  
+		        $('.scrollTo').fadeOut(600);  
+		});
+	}); 
+</script>
+<style type="text/css">
+.bottom-footer a {
+    width: 80px;
+    text-align: center;
+    display: inline-block;
+    margin-left: 11px;
+}
+.bottom-footer .img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+.copyright-text {
+    padding: 35px 10px;
+    margin: 0;
+}
+.copyright-photo{
+  background: url(http://experiencemorocco.com//imagesNew/cc.png) no-repeat;
+  position: absolute;
+  right: 4px;
+  bottom: 4px;
+  display: block;
+  color: white;
+  padding-left: 21px;
+}
+.copyright-photo1{
+  background: url(http://experiencemorocco.com//imagesNew/cc.png) no-repeat;
+  position: absolute;
+  right: 4px;
+  bottom: 4px;
+  display: block;
+  color: white;
+  padding-left: 21px;
+}
+.copyright-photo:hover{
+  color:rgb(240, 90, 40);
+
+}
+.global-text-section .contact-form{
+  margin-bottom: 50px;
+}
+.nav-active{
+  color:rgb(240, 90, 40) !important;
+}
+/*End code added by Nabil*/	
+
+#carousel-1 .carousel-caption {
+  bottom: 0px;
+  top: 270px;
+    width: 71%;
+
+}
+					
+</style>
+</head>
+<body>
+
+
+	<section class="module parallax parallax-1">
+		<div id="fullPageSlide">
+			<div class="container-fluid">
+			
+			<div class="logo"><img class="" src="http://experiencemorocco.com/imgNew/logo-in-slide.png" alt=""></div>
+			
+			<!--	** START GLOABL CAROUSSEL FOR HOME PAGE **	 -->
+				<div id="carousel-1" class="carousel slide" data-ride="carousel" data-interval="20000" data-pause="false">
+					<!-- Indicators -->
+				  	<ol class="carousel-indicators">
+				    	<li data-target="#carousel-1" data-slide-to="0" class="active"></li>
+				    	<li data-target="#carousel-1" data-slide-to="1"></li>
+				    	<li data-target="#carousel-1" data-slide-to="2"></li>
+						<li data-target="#carousel-1" data-slide-to="3"></li>
+				    	<li data-target="#carousel-1" data-slide-to="4"></li>
+						<li data-target="#carousel-1" data-slide-to="5"></li>
+				    	<br><br>
+				    	<a id="arr-down" class=" hidden-phone" href="#AboutSection"><img src="http://experiencemorocco.com/imgNew/scroll-to-bottom.png"></a>
+				  	</ol>
+
+  					<!-- Wrapper for slides -->
+  					<div class="carousel-inner">
+					
+						<div class="item active">
+      						<img class="firstSlider" src="http://experiencemorocco.com/imagesNew/weddings--1.jpg" alt="">
+							
+							<div class="carousel-caption hidden-phone">
+        						<p style="position: relative;bottom: 50px;">Welcome to your sumptuous Moroccan wedding! Whether you’re planning your dream destination wedding or saying "I do" again with a special vow renewal, celebrate your couple in Morocco with nuptials that are truly one-of-a kind!</p>
+      						</div>
+							
+						<!--a class="copyright-photo" target="_blank" href="https://www.flickr.com/photos/nuino/15550604360/">s6photography</a-->
+    					</div>
+						
+    					<div class="item ">
+      						<img class="firstSlider" src="http://experiencemorocco.com/imagesNew/weddings--2.jpg" alt="">
+      						<div class="carousel-caption hidden-phone">
+        						<p>Open the doors to the country's hidden gems and revel in the exotic music, scents, and colors of Moroccan traditions</p>
+      						</div>
+						<a class="copyright-photo" target="_blank" href="https://www.flickr.com/photos/jennyellenbrown/8510131719">andreasholm photography</a>
+    					</div>
+    					<div class="item">
+      						<img class="firstSlider" src="http://experiencemorocco.com/imagesNew/weddings--3.jpg" alt="">
+							<div class="carousel-caption hidden-phone">
+        						<p style="position: relative; top: 100px;">Take part in authentic Moroccan wedding traditions as you dance to the local tribal music and enjoy a refined Moroccan dinner designed just for you and your guests!</p>
+      						</div>
+							<a class="copyright-photo" target="_blank" href="https://www.flickr.com/photos/jennyellenbrown/8510131719">clairemorgan photography</a>							
+    					</div>
+    					<div class="item">
+      						<img class="firstSlider" src="http://experiencemorocco.com/imagesNew/weddings--4.jpg" alt="">
+							<div class="carousel-caption hidden-phone">
+        						<p>Hammams and henna hand-adorning are part of a majestic bridal experience. Immerse yourself in this beautiful treat to the senses</p>
+      						</div>
+							<a class="copyright-photo" target="_blank" href="https://www.flickr.com/photos/jennyellenbrown/8510131719">clairemorgan photography</a>
+    					</div>
+						
+						<div class="item">
+      						<img class="firstSlider" src="http://experiencemorocco.com/imagesNew/weddings--5.jpg" alt="">
+							<div class="carousel-caption hidden-phone">
+        						<p style="position: relative;top: 50px;">The cozy atmosphere, picturesque sights, gourmet meals, and sunset camel back rides will form memories of a lifetime!</p>
+      						</div>
+						<a class="copyright-photo" target="_blank" href="https://www.flickr.com/photos/pejmanphotos/3046056356">andreasholm photography</a>
+    					</div>
+						
+						<div class="item">
+      						<img class="firstSlider" src="http://experiencemorocco.com/imagesNew/weddings--6.jpg" alt="">
+							<div class="carousel-caption hidden-phone">
+        						<p style="position: relative;top: 100px;">Moroccan Hospitality will take on its true meaning as you walk down the aisle beneath a garden of swaying palm and orange blossom trees, fragrant with the scent of roses</p>
+      						</div>
+						<!--a class="copyright-photo" target="_blank" href="https://www.flickr.com/photos/pejmanphotos/3046056356">andreasholm photography</a-->
+    					</div>
+						
+						<div class="item">
+      						<img class="firstSlider" src="http://experiencemorocco.com/imagesNew/weddings--7.jpg" alt="">
+							<div class="carousel-caption hidden-phone">
+        						<p style="position: relative;top: 100px;">The lingering beauty of Morocco’s sceneries and traditions will form memories of a lifetime as you embark on your Moroccan honeymoon.</p>
+      						</div>
+						<a class="copyright-photo" target="_blank" href="https://www.flickr.com/photos/pejmanphotos/3046056356">s6photography</a>
+    					</div>
+  					</div>
+				<!-- Controls -->
+  							<a class="left carousel-control" href="#carousel-1" role="button" data-slide="prev"></a>
+  							<a class="right carousel-control" href="#carousel-1" role="button" data-slide="next"></a>
+				</div>
+			<!--	** END GLOABL CAROUSSEL FOR HOME PAGE **	 -->
+			</div>
+		</div>
+    </section>
+<script>
+$(document).on('click.nav','.navbar-collapse.in',function(e) {
+    if( $(e.target).is('a') || $(e.target).is('button')) {
+        $(this).collapse('hide');
+    }
+});
+</script>
+   	<section class="module content menu">
+        <div class="header">
+        	<div class="navbar navbar-default" role="navigation">
+      			<div class="container">
+        			<div class="navbar-header">
+          				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+            				<span class="sr-only">Toggle navigation</span>
+            				<span class="icon-bar"></span>
+            				<span class="icon-bar"></span>
+            				<span class="icon-bar"></span>
+          				</button>
+          				<a class="navbar-brand dropdown-toggle" href="#"><img src="http://experiencemorocco.com/imagesNew/logo.png" alt="logo-Experience Morocco" title="Experience Morocco"></a>
+        			</div>
+        			<div class="navbar-collapse collapse">
+					<nav class=" hidden-phone">
+          				<ul class="nav navbar-nav hidden-phone" style="position: relative;right: 100px;">
+            				<li><a href="#AboutSection">About Moroccan Weddings</a></li>
+							<li><a href="#destinationSection">Host Cities</a></li>
+							<!--<li><a href="#FoodieHighlights">Foodie Highlights</a></li>-->
+							<li><a href="#travelSection">About Us</a></li>
+            				<li><a href="#contactSection">Contact Us</a></li>
+							
+							<!--li><a href="#" class="socialfb"></a></li>
+							<li><a href="#" class="socialtw"></a></li>
+							<li><a href="#" class="socialinst"></a></li-->
+          				</ul>
+						</nav> 
+<!-----------------------------Menu responsive------------------------------------------------------------>
+<nav id="fixed-top-navigation" class="pull-right hidden-desktop hidden-tablet">
+							<!-- MENU FOR MOBILE DEVICES -->
+							<div id="menu-mobile" class="hidden-md hidden-lg">
+								<div class="dropdown current">
+								  <i class="icon-reorder"></i>
+								  
+								  <ul class="dropdown-toggle" role="menu" aria-labelledby="dropdownMenu1">
+									<li><a href="#AboutSection">About the trip</a></li>
+									<li><a href="#destinationSection">Host Cities</a></li>
+									<!--<li><a href="#FoodieHighlights">Foodie Highlights</a></li>-->
+									<li><a href="#travelSection">About Us</a></li>
+									<li><a href="#contactSection">Contact Us</a></li>
+								  </ul>
+								</div>
+							</div>
+						</nav>
+<!--------------------------------End Menu responsive------------------------------------------------------------>
+						<div class="reseauS hidden-phone hidden-tablet" style="position: absolute;right: 0px;top: 30px;">
+							<a href="https://www.facebook.com/expmorocco/" target="_blank" class="socialfb">
+							<img width="35" src="http://experiencemorocco.com//imagesNew/reseau/fb-hover.png" onmouseover="src='http://experiencemorocco.com/imagesNew/reseau/fb.png'" onmouseout="src='http://experiencemorocco.com/imagesNew/reseau/fb-hover.png'"></a>
+							
+							<a href="http://instagram.com/experiencemorocco/" target="_blank" class="socialinst">
+							<img width="35" src="http://experiencemorocco.com//imagesNew/reseau/inst-hover.png" onmouseover="src='http://experiencemorocco.com/imagesNew/reseau/inst.png'" onmouseout="src='http://experiencemorocco.com/imagesNew/reseau/inst-hover.png'"></a>
+						</div>
+<!--------------------------------End Menu responsive------------------------------------------------------------>
+        			</div><!--/.nav-collapse -->
+      			</div>
+    		</div>
+        </div>
+      </section>
+
+    <div id="first-bg" class="parallax-window hidden-phone" data-parallax="scroll" data-image-src="http://experiencemorocco.com/imagesNew/background-weddings-1.jpg" data-natural-width="1600" data-natural-height="470" data-bleed="10" data-speed="0.7">
+	<!--a class="copyright-photo1" target="_blank" href="https://www.flickr.com/photos/jennyellenbrown/8510131719">andreasholm photography</a-->
+	  </div>
+	  <div id="first-bg" class="background-fix hidden-desktop">
+		<img src="http://experiencemorocco.com/imagesNew/background-weddings-1.jpg" style="height: 100%;width: 100%;">
+		<!--a class="copyright-photo1" target="_blank" href="https://www.flickr.com/photos/jennyellenbrown/8510131719">andreasholm photography</a-->
+	  </div>
+      <section id="AboutSection" class="module content">
+	  
+        <div class="container">
+        	<div class="row">
+        		<h2>MOROCCAN WEDDINGS</h2>
+        		<div id="first" class="global-text-section">
+        			<div class="col-md-6 transparent" id="left-text-section-1">
+        				<p>Sought-after for its year-round sunshine and vibrant nuptial traditions, Morocco is the perfect place to celebrate with your loved ones as you take your first steps as a married couple. Whether you picture your ceremony on a tranquil beach, within a blooming Andalusian garden, or surrounded by the Atlas mountains, Experience Morocco can create an unforgettable celebration for you and your family. From palatial resorts to sumptuous Riads, your destination wedding can be as ornate or simple as you desire, and we can include elements of Moroccan traditions like a henna ceremony or the traditional lifting of the wedded couple during the party. With an international team of travel professionals and a breadth of experience in curated luxury travel, Experience Morocco is committed to making your wedding a huge success!
+						</p><br>
+        		</div>
+				</div>
+        	</div>
+        </div>
+      </section>
+	  
+	  <div class="parallax-window hidden-phone" data-parallax="scroll" data-image-src="http://experiencemorocco.com/imagesNew/background-weddings-2.jpg" data-natural-width="1600" data-natural-height="470" data-bleed="10" data-speed="0.7">
+	  <!--a class="copyright-photo1" target="_blank" href="https://www.flickr.com/photos/jennyellenbrown/8510131719">andreasholm photography</a-->
+	  </div>
+	  <div class="background-fix  hidden-desktop">
+		<img src="http://experiencemorocco.ma/imagesNew/background-weddings-2.jpg" style="height: 100%;width: 100%;">
+		<!--a class="copyright-photo1" target="_blank" href="https://www.flickr.com/photos/jennyellenbrown/8510131719">andreasholm photography</a-->
+	  </div>
+
+      <script>
+$('a.zoom').fancybox({
+'titlePosition' : 'inside'
+});
+</script>
+	  <section id="destinationSection" class="module content">
+	  
+        <div class="container">
+        	<div class="row">
+        		<h2>Host Cities</h2>
+        		<div id="carousel-3" class="carousel slide" data-ride="carousel">
+  					<!-- Wrapper for slides -->
+  					<div class="carousel-inner">
+    					<div class="item active">      						
+				<div class="col-md-6">      							
+				<div class="imgSlider">      								
+				<img src="http://experiencemorocco.com/imagesNew/mini-Destinations-weddings.jpg" alt="">									      								
+				<a class="zoom fancybox" href="http://experiencemorocco.com/imagesNew/Destinations-weddings.jpg"></a>																		      							
+				</div>      						
+				</div>      						
+				<div class="col-md-6">      							
+				<div class="text-in-slide">      								
+				<h3>More</h3>      								
+				<p>Morocco is full of palatial resorts, charming riads, and gorgeous natural landscapes perfect for hosting a wedding. The following slides present a few cities where we can organize your big day.</p>      								
+				<!--p>Departure Dates: TBD<br>
+				Price: $3600 per person for 9 days/ 8 nights, and $5400 per person for 13 days/ 12 nights.<br>Prices are in double accommodation and do not include airfare to/ from Morocco.</p-->
+				
+				</div>      						
+				</div>      						    					
+				</div>    					    					
+				<div class="item">      						
+				<div class="col-md-6">      							
+				<div class="imgSlider">      								
+				<img src="http://experiencemorocco.com/imagesNew/mini-Casablanca-weddings.jpg" alt="">
+				<a class="zoom fancybox" href="http://experiencemorocco.com/imagesNew/Casablanca-weddings.jpg"></a>      						
+				</div>      						
+				</div>      						
+				<div class="col-md-6">      							
+				<div class="text-in-slide">      								
+				<h3>Casablanca</h3>      								
+				<p>Casablanca embodies modern Morocco. It’s impossible to feel indifferent to this vibrant city. Be sure to take in its “towers”: the minaret of the Hassan II mosque, the El Hank lighthouse, and the Twin Center. Casablanca has a very rich architectural heritage, much of which remains to be explored; not to mention a stroll along the Boulevard de la Corniche for the beach-side atmosphere.</p>										
+				<!--<p><i>Average weather in May: 23° Celsius (73° F), sunny</i></p> --> 	
+				<!--p style="line-height: 20px;"><span style="color:#FFB08B;">Yogi Moment </span>: Embrace the spirit of Marrakech’s warmth with an introductory Pranayama Meditation under the stars, and a foot massage to relax you from your flight.</p-->				
+				</div>      						
+				</div>          					
+				</div>    											
+				<div class="item">      						
+				<div class="col-md-6">      							
+				<div class="imgSlider">      								
+				<img src="http://experiencemorocco.com/imagesNew/mini-MAMARRAKECH-weddings.jpg" alt="">      								
+				<a class="zoom fancybox" href="http://experiencemorocco.com/imagesNew/AMarrakech-weddings.jpg"></a>      							</div>      						
+				</div>      						
+				<div class="col-md-6">      							
+				<div class="text-in-slide">      								
+				<h3>Marrakech</h3>      								
+				<p>Nicknamed the Ochre City, Marrakech is an established destination for romantic getaways. The city’s charming alleyways, splendid colours and scents will awaken your senses to a delightful world where modern culture sits just on the other side of 11th century walls.</p>      								
+				<!--p><i>Average weather in June: 31° Celcius (88° F), sunny and dry</i></p-->				      							
+				<!--p style="line-height: 20px;"><span style="color:#FFB08B;">Yogi Moment </span>: Enjoy a Yin Yoga and intention setting evening by the pool</p-->			
+				
+				</div>      						
+				</div>          					
+				</div>	
+				<div class="item">      						
+				<div class="col-md-6">      							
+				<div class="imgSlider">      								
+				<img src="http://experiencemorocco.com/imagesNew/mini-Atlas-weddings.jpg" alt="">      								
+				<a class="zoom fancybox" href="http://experiencemorocco.com/imagesNew/Atlas-weddings.jpg"></a>      							</div>      						
+				</div>      						
+				<div class="col-md-6">      							
+				<div class="text-in-slide">      								
+				<h3>The Atlas Mountains </h3>      								
+				<p>A Wedding in Morocco’s Atlas Mountains is an unforgettable experience. The beauty and diversity of the landscape is breathtaking. Its mix of berber villages, deep lush valleys and snow-capped mountains accounts for a splendid Alpine experience.</p>									
+				<!--p><i>Average weather in July: 29° Celsius (84° F), sunny</i></p-->      							
+				<!--p style="line-height: 20px;"><span style="color:#FFB08B;">Gourmet Moment </span>: Tune in to your senses during your relaxing massage with a selection of oils from Orange Blossom, Lemon Verbena, Rose, and more…</p-->
+				</div>      						
+				</div>          					
+				</div>	
+				<div class="item">      						
+				<div class="col-md-6">      							
+				<div class="imgSlider">      								
+				<img src="http://experiencemorocco.com/imagesNew/mini-ATANGER-weddings.jpg" alt="">      								
+				<a class="zoom fancybox" href="http://experiencemorocco.com/imagesNew/ATANGER-weddings.jpg"></a>      							</div>      						
+				</div>      						
+				<div class="col-md-6">      							
+				<div class="text-in-slide">      								
+				<h3>Tangier </h3>      								
+				<p>Tangier’s charms have inspired artists, writers and travelers from Henri Matisse to Tennessee Williams. With a beautiful bay overlooking the Strait of Gibraltar, Tangier offers the perfect backdrop to your Mediterranean wedding. The city features several world-class resorts, a beautiful art scene as well beaches you won’t soon forget!</p>									
+				<!--p><i>Average weather in July (hotest month): 24° Celcius (75° F), sunny and windy</i></p-->      							
+				<!--p style="line-height: 20px;"><span style="color:#FFB08B;">Gourmet Moment </span>: Tune in to your senses during your relaxing massage with a selection of oils from Orange Blossom, Lemon Verbena, Rose, and more…</p-->
+				</div>      						
+				</div>          					
+				</div>												
+				<div class="item">      						
+				<div class="col-md-6">      							
+				<div class="imgSlider">      								
+				<img src="http://experiencemorocco.com/imagesNew/mini-AEssaouira-weddings.jpg" alt="">      								
+				<a class="zoom fancybox" href="http://experiencemorocco.com/imagesNew/AEssaouira-weddings.jpg"></a>   
+				</div>      						
+				</div>      						
+				<div class="col-md-6">      							
+				<div class="text-in-slide">      								
+				<h3>Essaouira </h3>      								
+				<p>Essaouira’s brilliant blue and white architecture, windswept beaches and easy-going charm provide the perfect scenery for an authentic Moroccan wedding. Behind the 18th century walls are artisan workshops, souks, and winding alleyways that embody the charms of an intimate venue straight out of the Arabian Nights’ fairy tale. </p>      								
+				 <!--p><i>Average weather in June: 21° Celsius (64° F), sunny with ocean breeze</i></p--> 		      							
+				<!--p style="line-height: 20px;"><span style="color:#FFB08B;">Yogi Moment </span>: Sunset practise in the Menara Gardens, at the gates of the Atlas Mountains</p-->
+				</div>      						
+				</div>          					
+				</div>																							
+						
+  					</div>
+  					<!-- Controls -->
+  							<a class="left carousel-control" href="#carousel-3" role="button" data-slide="prev"></a>
+  							<a class="right carousel-control" href="#carousel-3" role="button" data-slide="next"></a>
+				</div>
+        	</div>
+        </div>
+      </section>
+      
+      <div class="parallax-window hidden-phone hidden-tablet" data-parallax="scroll" data-image-src="http://experiencemorocco.com/imagesNew/background-weddings-3.jpg" data-natural-width="1600" data-natural-height="470" data-bleed="10" data-speed="0.7">
+	  </div>	
+<!-----------updated by ali------------------------------------------->
+	<div class="background-fix  section-4 hidden-desktop">
+		<img src="http://experiencemorocco.ma/imagesNew/background-weddings-3.jpg" style="height: 100%;width: 100%;">
+	  </div>	  
+<!-----------updated by ali------------------------------------------->
+
+<!-------------------------------------updated by yassine----------------------------------------->
+<section id="MoroccanWedding" class="module content">
+	  
+        <div class="container">
+        	<div class="row">
+        		<h2>Moroccan Wedding Traditions</h2>
+        		<div id="carousel-44" class="carousel slide" data-ride="carousel">
+  					<!-- Wrapper for slides -->
+  					<div class="carousel-inner">
+    					<div class="item active">      						
+				<div class="col-md-6">      							
+				<div class="imgSlider">      								
+				<img src="http://experiencemorocco.com/imagesNew/mini-SPA-weddings.jpg" alt="">									      								
+				<a class="zoom fancybox" href="http://experiencemorocco.com/imagesNew/SPA-weddings.jpg"></a>																		      							
+				</div>      						
+				</div>      						
+				<div class="col-md-6">      							
+				<div class="text-in-slide">      								
+				<h3>Hammam</h3>      								
+				<p>Before the wedding, the bride and her intimate friends meet for the traditional Hammam bath. Authentic black soap and purifying scrubs give rise to incredible scents of eucalyptus, honey and orange blossom. The cheering chants and relaxed atmosphere raise everyone’s spirits for the big day! </p>
+				
+				</div>      						
+				</div>      						    					
+				</div>    					    					
+				<div class="item">      						
+				<div class="col-md-6">      							
+				<div class="imgSlider">      								
+				<img src="http://experiencemorocco.com/imagesNew/mini-Henna-weddings.jpg" alt="">      								
+				<a class="zoom fancybox" href="http://experiencemorocco.com/imagesNew/Henna-weddings.jpg"></a>      						
+				</div>      						
+				</div>      						
+				<div class="col-md-6">      							
+				<div class="text-in-slide">      								
+				<h3>Henna Ceremony</h3>      								
+				<p>After the Hammam bath, the henna ceremony or "Henna" is held in the presence of family and friends. The bride’s hands are adorned with a traditional tattoo made of Henna and herbal essences. The symbolic virtues of henna in a Moroccan wedding is to bring health, prosperity and success to the newlyweds.</p>				
+				</div>      						
+				</div>          					
+				</div>    											
+				<div class="item">      						
+				<div class="col-md-6">      							
+				<div class="imgSlider">      								
+				<img src="http://experiencemorocco.com/imagesNew/mini-Negafates-weddings.jpg" alt="">      								
+				<a class="zoom fancybox" href="http://experiencemorocco.com/imagesNew/Negafates-weddings.jpg"></a>      							</div>      						
+				</div>      						
+				<div class="col-md-6">      							
+				<div class="text-in-slide">      								
+				<h3>Negafates</h3>      								
+				<p>During the ceremony, the bride is assisted by "Neggafates" who are logistic experts in traditional weddings. The Neggafates’ expertise in traditional ceremonies, style and fashion enables them to help with traditional Moroccan dresses, jewelry, hair styling and even the lifting of the bride in the “Amariya”.</p>
+				</div>      						
+				</div>          					
+				</div>												
+				<div class="item">      						
+				<div class="col-md-6">      							
+				<div class="imgSlider">      								
+				<img src="http://experiencemorocco.com/imagesNew/mini-Amariya-weddings.jpg" alt="">      								
+				<a class="zoom fancybox" href="http://experiencemorocco.com/imagesNew/Amariya-weddings.jpg"></a>      							</div>      						
+				</div>      						
+				<div class="col-md-6">      							
+				<div class="text-in-slide">      								
+				<h3>Amariya</h3>      								
+				<p>The “Amariya” is the traditional cushion table where the bride sits comfortably before she gets lifted by the Negaffates. Adorned with a traditional dress of ceremony, the bride is touring as to be seen and admired by the entire audience in a festive atmosphere full of sound and color. </p>
+				</div>      						
+				</div>          					
+				</div>	
+															
+				<div class="item">      						
+				<div class="col-md-6">      							
+				<div class="imgSlider">      								
+				<img src="http://experiencemorocco.com/imagesNew/mini-Sbouhi-weddings.jpg" alt="">      								
+				<a class="zoom fancybox" href="http://experiencemorocco.com/imagesNew/Sbouhi-weddings.jpg" title=""></a>   
+				</div>      						
+				</div>      						
+				<div class="col-md-6">      							
+				<div class="text-in-slide">      								
+				<h3>Sbouhi - Post Wedding Brunch</h3>      								
+				<p>Breakfast in bed is nice, but a Moroccan brunch with the wedding bunch can be a blissful experience! Traditionally, the “Sbouhi” or post-wedding Brunch brings together family and friends. Gifts and blessings are shared with the newlyweds as they make their way to their idyllic honeymoon.</p>
+				</div>      						
+				</div>          					
+				</div>	
+															
+				<div class="item">      						
+				<div class="col-md-6">      							
+				<div class="imgSlider">      								
+				<img src="http://experiencemorocco.com/imagesNew/mini-Aissawa-weddings.jpg" alt="">      								
+				<!--a class="zoom fancybox" href="http://experiencemorocco.com/imagesNew/img-slide-zoom-in5.jpg"></a-->																		
+				<a class="zoom fancybox" href="http://experiencemorocco.com/imagesNew/Aissawa-weddings.jpg" title=""></a>									      							</div>      						
+				</div>      						
+				<div class="col-md-6">      							
+				<div class="text-in-slide">      								
+				<h3>Aissawa</h3>      								
+				<p>The “Aissawa are known for their polyrhythmic spiritual music, which generally comprises songs accompanied by percussion and dance. Aissawa’s presence in weddings is a symbol of good luck and prosperity, as the group brings together traditional music traditions and dances to elevate the participants to a state of joyful excitement.</p>
+				</div>      						
+				</div>          					
+				</div>												
+														
+				<div class="item">      						
+				<div class="col-md-6">      							
+				<div class="imgSlider">      								
+				<img src="http://experiencemorocco.com/imagesNew/mini-meal-weddings.jpg" alt="">      								
+				<a class="zoom fancybox" href="http://experiencemorocco.com/imagesNew/meal-weddings.jpg"></a>      							</div>      						
+				</div>      						
+				<div class="col-md-6">      							
+				<div class="text-in-slide">      								
+				<h3>The Meal</h3>      								
+				<p>Moroccan weddings are known for the variety of their exotic dishes and authentic ingredients. Traditionally, wedding meals include a pastilla (chicken puff pastry with almonds, sugar and cinnamon), a Mashwi (baby lamb), a Tajine (meat with prunes and almonds), or Couscous. Moroccan pastries and cookies are also served with mint tea throughout the ceremony.</p>
+				</div>   
+				</div>          					
+				</div>																							
+						
+  					</div>
+  					<!-- Controls -->
+  							<a class="left carousel-control" href="#carousel-44" role="button" data-slide="prev"></a>
+  							<a class="right carousel-control" href="#carousel-44" role="button" data-slide="next"></a>
+				</div>
+        	</div>
+        </div>
+      </section>
+      
+<!---------------------------------06-07-2015----------------------------------------------------->
+
+
+<section id="FoodieHighlights" class="module content">
+	  
+        <div class="container">
+        	<div class="row">
+        		<h2>Beyond The Wedding</h2>
+        		<div id="carousel-4" class="carousel slide" data-ride="carousel">
+  					<!-- Wrapper for slides -->
+  					<div class="carousel-inner">
+    					<div class="item active">      						
+				<div class="col-md-6">      							
+				<div class="imgSlider">      								
+				<img src="http://experiencemorocco.com/imagesNew/mini-Gnawa-weddings.jpg" alt="">									      								
+				<a class="zoom fancybox" href="http://experiencemorocco.com/imagesNew/Gnawa-weddings.jpg"></a>																		      							
+				</div>      						
+				</div>      						
+				<div class="col-md-6">      							
+				<div class="text-in-slide">      								
+				<h3>Jam with a Gnawa Band</h3>      								
+				<p>Gnawa music is a rich repertoire of African mystic songs and rhythms. Its well preserved heritage combines ritual poetry with traditional music and dancing. Jam with a local tribal band under the starry sky of the Sahara Desert or at Jemaa El Fna, Marrakech's Central square for a vibrant experience you’ll never forget.</p>
+				
+				</div>      						
+				</div>      						    					
+				</div>    					    					
+				<div class="item">      						
+				<div class="col-md-6">      							
+				<div class="imgSlider">      								
+				<img src="http://experiencemorocco.com/imagesNew/mini-Pastries-weddings.jpg" alt="">      								
+				<a class="zoom fancybox" href="http://experiencemorocco.com/imagesNew/Pastries-weddings.jpg"></a>      						
+				</div>      						
+				</div>      						
+				<div class="col-md-6">      							
+				<div class="text-in-slide">      								
+				<h3>Moroccan Gourmet Workshop</h3>      								
+				<p>Pick your fresh fish from the port of Essaouira, shop for spices in the busy souks of Marrakech, or bake bread in the way of the nomads in the hot sand of the Sahara. Our cooking workshop will take you and your guests on a sensory adventure to discover, taste, and learn Morocco’s delicious cuisine.</p>				
+				</div>      						
+				</div>          					
+				</div>    											
+				<div class="item">      						
+				<div class="col-md-6">      							
+				<div class="imgSlider">      								
+				<img src="http://experiencemorocco.com/imagesNew/mini-Extention-Trip-weddings.jpg" alt="">      								
+				<a class="zoom fancybox" href="http://experiencemorocco.com/imagesNew/Extention-Trip-weddings.jpg"></a>      							</div>      						
+				</div>      						
+				<div class="col-md-6">      							
+				<div class="text-in-slide">      								
+				<h3>Camel Rides</h3>      								
+				<p>Enjoy a quintessential Moroccan experience with your friends and family on the back of camel, through the rugged landscapes around Marrakech or the Saharan dunes. For those who haven’t ridden a camel before, the experience of getting on and off the camel is a sensation unlike any other!</p>
+				</div>      						
+				</div>          					
+				</div>												
+				<div class="item">      						
+				<div class="col-md-6">      							
+				<div class="imgSlider">      								
+				<img src="http://experiencemorocco.com/imagesNew/mini-Sandboarding-weddings.jpg" alt="">      								
+				<a class="zoom fancybox" href="http://experiencemorocco.com/imagesNew/Sandboarding-weddings.jpg"></a>      							</div>      						
+				</div>      						
+				<div class="col-md-6">      							
+				<div class="text-in-slide">      								
+				<h3>Sahara Adventures</h3>      								
+				<p>Embark on a Saharan adventure to sandboard down the dunes, watch the sunset on camelback, and enjoy a magical night under the stars from your private bedouin camp</p>
+				</div>      						
+				</div>          					
+				</div>												
+<!--				<div class="item">      						
+				<div class="col-md-6">      							
+				<div class="imgSlider">      								
+				<img src="http://experiencemorocco.com/imagesNew/mini-aerial-weddings.jpg" alt="" />      								
+				<a class="zoom fancybox" href="http://experiencemorocco.com/imagesNew/aerial-weddings.jpg" title="" ></a>   
+				</div>      						
+				</div>      						
+				<div class="col-md-6">      							
+				<div class="text-in-slide" >      								
+				<h3>Aerial Yoga</h3>      								
+				<p>This newly introduced discipline has proven its large success among the Moroccan population and International visitors. Join us for a special class near the coast of Casablanca!</p>
+				</div>      						
+				</div>          					
+				</div>-->												
+				<div class="item">      						
+				<div class="col-md-6">      							
+				<div class="imgSlider">      								
+				<img src="http://experiencemorocco.com/imagesNew/mini-Nightlife-weddings.jpg" alt="">      								
+				<!--a class="zoom fancybox" href="http://experiencemorocco.com/imagesNew/img-slide-zoom-in5.jpg"></a-->																		
+				<a class="zoom fancybox" href="http://experiencemorocco.com/imagesNew/Nightlife-weddings.jpg" title=""></a>									      							</div>      						
+				</div>      						
+				<div class="col-md-6">      							
+				<div class="text-in-slide">      								
+				<h3>Nightlife</h3>      								
+				<p>With a wide array of international restaurants, clubs, and cabarets featuring world-class entertainment, Morocco’s nightlife offers something for everyone and we will go above and beyond to make sure you and your guests have the best time once the sun goes down!</p>
+				</div>      						
+				</div>          					
+				</div>												
+														
+				<div class="item">      						
+				<div class="col-md-6">      							
+				<div class="imgSlider">      								
+				<img src="http://experiencemorocco.com/imagesNew/mini-hike-weddings.jpg" alt="">      								
+				<a class="zoom fancybox" href="http://experiencemorocco.com/imagesNew/hike-weddings.jpg"></a>      							</div>      						
+				</div>      						
+				<div class="col-md-6">      							
+				<div class="text-in-slide">      								
+				<h3>Hike in the Atlas Mountains</h3>      								
+				<p>Morocco’s wealth of landscapes provides the perfect backdrop for a memorable hike through the Atlas mountains, stopping at local Berber villages for a taste of a lifestyle unchanged for centuries.</p>
+				</div>   
+				</div>          					
+				</div>																							
+						
+  					</div>
+  					<!-- Controls -->
+  							<a class="left carousel-control" href="#carousel-4" role="button" data-slide="prev"></a>
+  							<a class="right carousel-control" href="#carousel-4" role="button" data-slide="next"></a>
+				</div>
+        	</div>
+        </div>
+      </section>
+
+
+
+
+ <div class="parallax-window hidden-phone hidden-tablet" data-parallax="scroll" data-image-src="http://experiencemorocco.com/imagesNew/background-weddings-4.jpg" data-natural-width="1600" data-natural-height="470" data-bleed="10" data-speed="0.7">
+ <!--a class="copyright-photo1" target="_blank" href="https://www.flickr.com/photos/jennyellenbrown/8510131719">clairemorgan photography</a-->
+	  </div>	
+<!-----------updated by ali------------------------------------------->
+	<div class="background-fix  section-4 hidden-desktop">
+		<img src="http://experiencemorocco.ma/imagesNew/background-weddings-4.jpg" style="height: 100%;width: 100%;">
+		<!--a class="copyright-photo1" target="_blank" href="https://www.flickr.com/photos/jennyellenbrown/8510131719">clairemorgan photography</a-->
+	  </div>	  
+<!-----------updated by ali------------------------------------------->
+
+<!---------------------------------06-07-2015----------------------------------------------------->
+
+
+<section class="module content content-2" id="travelSection">
+<style>
+.global-text-section .contact-form .form-group .send {
+  width: 95%;
+}
+</style>	  
+      </section>
+
+
+	  <div class="background-fix  hidden-desktop">
+		<img src="http://experiencemorocco.ma/imagesNew/background-weddings-5.jpg" style="height: 100%;width: 100%;">
+		<!--a class="copyright-photo1" target="_blank" href="https://www.flickr.com/photos/jennyellenbrown/8510131719">clairemorgan photography</a-->
+	  </div>
+	  
+      <section class="module content hidden-phone" id="">
+	  
+        <div class="container">
+        	<div class="row">
+        		<div class="global-text-section">
+	        		<h2>About Experience Morocco</h2>
+	        		<div id="fly-it" class="descriptionTravel">
+		        		<div class="content-travel-text transparent" id="Travel-text">
+		        			<p class="Travel"><span style="color: #ef5a28;">Experience Morocco</span> is in the business of changing perspectives. We uncover experiences that open our guests’ points of view about our country and invite them to build a lasting connection with our home. By traveling with our guests, we travel within ourselves to find new ways of enriching Moroccan traditions with influences from around the world.</p><br>
+							<p class="Travel">As a leading provider of curated and authentic travels across Morocco and with a diverse team of travel professionals who speak 16 languages, we have the experience and know-how to design memorable trips custom-built around your objectives. We offer genuine cultural adventures that go beyond the typical tourist circuits to give you a nuanced understanding of our culture in all its beauty and intricacy.</p><br>
+							<p class="Travel">For more information about us and the trips that we are organizing, please visit:  <a href="www.experiencemorocco.com" style="color: #ef5a28;  text-decoration: none;">www.experiencemorocco.com</a> </p><br>
+		        		</div>
+					</div>
+				</div>
+        	</div>
+        </div>
+      </section>
+
+      <div class="parallax-window hidden-phone hidden-tablet" data-parallax="scroll" data-image-src="http://experiencemorocco.com/imagesNew/background-weddings-6.jpg" data-natural-width="1600" data-natural-height="470" data-bleed="10" data-speed="0.7">
+	  <!--a class="copyright-photo1" target="_blank" href="https://www.flickr.com/photos/jennyellenbrown/8510131719">andreasholm photography 
+</a-->
+	  </div>
+	   
+	  <!-----------updated by ali------------------------------------------->
+	<div class="background-fix   hidden-phone hidden-desktop">
+		<img src="http://experiencemorocco.ma/imagesNew/background-weddings-6.jpg" style="height: 100%;width: 100%;">
+		<!--a class="copyright-photo1" target="_blank" href="https://www.flickr.com/photos/jennyellenbrown/8510131719">andreasholm photography 
+</a-->
+	  </div>	  
+<!-----------updated by ali------------------------------------------->
+
+<!--section class="module content hidden-phone" id="">
+	  
+        <div class="container">
+        	<div class="row">
+        		<div class="global-text-section">
+	        		<h2>About Marrakech</h2>
+	        		<div id="fly-it" class="descriptionTravel">
+		        		<div class="content-travel-text" id="Travel-text">
+		        			<p class="Travel">Marrakech is two pulsating cities in one - where modern culture sits just the other side of 11th Century walls. And all this endearing commotion is surrounded by quiet Berber villages in the Atlas mountains just a stone’s throw away.<br>							
+							Within the traditional Medina walls, a heavy door is discreetly ajar among the ancient facades of the old town…opening onto one of the most beautiful riads of Marrakech. Also referred to as an oasis of calm and tranquility, a riad is a historic house remodeled to host its guest in a modern idyllic atmosphere.</p><br />
+							<p class="Travel">You’ll revel in the colorful rush of the city souks, be inspired by the breathtaking views of the Atlas Mountains, and moved by the gentle and warm hospitality of the artisans, chefs, and guides who will make sure your experience is one to remember.</p><br />
+							<br />
+		        		</div>
+					</div>
+				</div>
+        	</div>
+        </div>
+      </section-->
+
+      <!--div class="parallax-window hidden-phone hidden-tablet" data-parallax="scroll" data-image-src="http://experiencemorocco.com/imagesNew/background-yoga-7.jpg" data-natural-width="1600" data-natural-height="470" data-bleed="10" data-speed="0.7" >
+	  </div-->
+	   
+	  <!-----------updated by ali------------------------------------------->
+	<!--div class="background-fix   hidden-phone hidden-desktop">
+		<img src="http://experiencemorocco.ma/imagesNew/background-yoga-7.jpg" style="height: 100%;width: 100%;">
+	  </div-->	  
+<!-----------updated by ali------------------------------------------->
+
+      <section id="contactSection" class="module content" style="padding-bottom: 0;">
+	  
+        <div class="container">
+        	<div class="row">
+        		<div class="global-text-section">
+	        		<h2>Get in touch  <a class="scrollTo hidden-phone" href="#fullPageSlide"><img src="http://experiencemorocco.com/imagesNew/scroll-to-top.png" alt=""></a></h2>
+					
+	        		<p class="Travel">Ready to start planning your wedding? Please fill out this form to get in touch with a travel specialist. If you would like to speak to a member of our team immediately, you can also call us at <span style="color: #ef5a28;">+1 646 249 8881</span> .We look forward to hearing from you and having you at Experience Morocco!</p>
+					
+					
+	        		<div class="contact-form">
+	        			<form id="form2" class="form-horizontal ws-validate" action="" method="POST">
+	        				<div class="form-group">
+					        	<div class="col-xs-12">
+					            	<input name="name" type="text" class="form-control" id="name" placeholder="Name *" data-errormessage-value-missing="Please fill out all of the fields to get in touch!" required>
+					            </div>
+					    	</div>
+					        <div class="form-group">
+					        	<div class="col-xs-12">
+					            	<input name="email" type="email" class="form-control" id="email" placeholder="Email Address *" data-errormessage-type-mismatch="Please enter a valid email address" data-errormessage-value-missing="Please fill out all of the fields to get in touch!" required>
+					            </div>
+					        </div>
+					        <div class="form-group">					            
+					            <div class="col-xs-12">
+					            	<input name="subject" type="text" class="form-control" id="subject" placeholder="Subject *" data-errormessage-value-missing="Please fill out all of the fields to get in touch!" required>
+					            </div>
+					        </div>
+					        <div class="form-group">
+								<div class="col-xs-12">
+								<select name="number" type="select" class="form-control" id="number" placeholder="Number of travellers *" required style="text-indent: 50px;" data-errormessage-value-missing="Please fill out all of the fields to get in touch!">	
+										<option value="">Number of Travelers</option>
+										<option value="0-10">0-10</option>
+										<option value="10-20">10-20</option>
+										<option value="20-30">20-30</option>
+										<option value="30-40">30-40</option>
+										<option value="40+">40+</option>
+									</select>
+					            </div>
+					         </div>
+					         <div class="form-group">
+					            <div class="col-xs-12">
+					            	<label id="forDate">Target Travel Dates *</label>
+					            </div>
+					         </div>
+
+					         <div class="form-group">   
+					            <div class="col-xs-12">
+					            	<div class="col-xs-5">
+					            		<input id="datetimepicker1" name="StartDate" type="text" class="form-control" data-errormessage-value-missing="Please fill out all of the fields to get in touch!" required>
+					            	</div>
+					            	<div class="col-xs-2">
+					            		<label id="forDate2">To</label>
+					            	</div>
+					            	<div class="col-xs-5">
+					            		<input id="datetimepicker2" name="EndDate" type="text" class="form-control" data-errormessage-value-missing="Please fill out all of the fields to get in touch!" required>
+					            	</div>      	
+					            </div>
+					          </div>
+					          <div class="form-group"> 
+								<div class="col-xs-12">
+					                <textarea rows="3" class="form-control" id="message" name="message" placeholder="Message" data-errormessage-value-missing="Please fill out all of the fields to get in touch!" required></textarea>
+					            </div>
+					           </div>
+					           <div class="form-group">					           
+					           		<div class="col-xs-offset-1 col-xs-10 col-xs-offset-1">
+					                	<label id="forNews" class="checkbox-inline">
+					                    	<input type="checkbox" name="checkbox" id="checkbox"> Add me to the Experience Morocco weddings mailing list.
+					                	</label><br><br>
+					            	</div>
+					           </div>  							   							  
+							   <div class="form-group"> 														<div class="col-xs-12">																	<div class="g-recaptcha" data-sitekey="6LfNugUTAAAAACxAwDHqmsDV6GwZtCgyU0FwjS4X" required></div>					            </div>													           </div>
+					           <div class="form-group">					           
+					           		<div class="col-xs-offset-1 col-xs-10 col-xs-offset-1">
+					                	<input type="submit" class="btn btn-primary send" value="Send" name="subm" id="buttonsub">
+					            	</div>
+					           </div>
+	        			</form>
+						 <span class="messageSucces" style="display:none;color:rgb(240, 90, 40);">Thanks for reaching out, we'll be in touch soon!</span>
+						 
+						 <span class="messageError" style="display:none;color:rgb(240, 90, 40);">Please fill out all of the fields to get in touch!</span>
+	        		</div>
+				</div>
+        	</div>
+        	<footer class="bottom-footer">
+            <div class="container">
+                <div class="copyright-container">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <p class="copyright-text">©Copyright 2018, All Rights Reserved</p>
+                        </div>
+                        <div class="col-sm-8">
+                            <a href="https://www.zicasso.com/luxury-tours/morocco/vacation-package-travel-agency" target="_blank"><img src="./dist/images/Zicasso.png" class="img-fluid" alt="Responsive image"></a>
+                            <a href="http://www.lemiami.com/about/" target="_blank"><img src="./dist/images/LE.png" class="img-fluid" alt="Responsive image"></a>
+                            <a href="https://www.iglta.org/experience-morocco/" target="_blank"><img src="./dist/images/IGLTA.jpg" class="img-fluid" alt="Responsive image"></a>
+                            <a href="https://www.iltm.com/" target="_blank"><img src="./dist/images/ILTM.png" class="img-fluid" alt="Responsive image"></a>
+                        </div>
+                </div>
+            </div>
+        </div></footer>
+        </div>
+      </section>
+<script>
+var today = new Date();
+var dd = today.getDate();
+var mm = today.getMonth()+1; //January is 0!
+var yyyy = today.getFullYear();
+
+if(dd<10) {
+    dd='0'+dd
+} 
+
+if(mm<10) {
+    mm='0'+mm
+} 
+
+today = dd+'/'+mm+'/'+yyyy;
+$('#datetimepicker1').datetimepicker({
+dayOfWeekStart : 1,
+lang:'fr',
+startDate:	today,
+});
+$('#datetimepicker1').datetimepicker({
+	value: today,
+	step:10,
+	lang:'fr',
+	timepicker:false,
+	format:'d/m/Y',
+	formatDate:'Y/m/d'
+});
+
+today = dd+'/'+mm+'/'+yyyy;
+$('#datetimepicker2').datetimepicker({
+dayOfWeekStart : 1,
+lang:'fr',
+startDate:	today,
+});
+$('#datetimepicker2').datetimepicker({
+	value: today,
+	step:10,
+	lang:'fr',
+	timepicker:false,
+	format:'d/m/Y',
+	formatDate:'Y/m/d'
+});
+</script>
+
+<script type="text/javascript">    
+
+function vmel(mail)		        {
+
+	var regExpm = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+	var email = mail.match(regExpm);
+	if (!email) return 0;
+	else return 1;
+	} 
+	function chmpv()		        {
+		
+		var alertTxt = "";
+		
+		for (i=0;i<7;i++)		            {
+			var x = document.forms['form2'].elements[i];
+			if(x.value==0 || x.value=='')		                {
+				alertTxt += "please fill in the " + x.name + " field \n"; break;
+				}	
+				else if(i==1){	
+				//alert("test" $x);
+								var vm=vmel(x.value);
+								
+ 								if(vm == 0){
+									alertTxt += "Please enter a valid email address \n"; 
+									break;
+									}
+									}
+									}
+									var grr= document.getElementById("g-recaptcha-response").value;	
+									
+									if(grr == '')	alertTxt += "Please enter a valid captcha text \n";	
+									return alertTxt;
+									}
+									$("#form2").submit(function(e){
+										e.preventDefault();	$(".messageError").fadeOut();
+										var alertTxt = chmpv();
+										if(alertTxt != "")    {
+											$(".messageError").text( alertTxt );
+											$(".messageError").fadeIn();
+											}	
+											else{
+												verif();
+												$(".messageSucces").fadeIn(); 
+												$(".messageSucces").fadeOut(13000);	}});
+												function verif()                 {
+													//alert("ooo");	
+													var name= document.getElementById("name").value;
+													var email= document.getElementById("email").value;	
+													var subject= document.getElementById("subject").value;
+													var number= document.getElementById("number").value;   
+													var datetimepicker1= document.getElementById("datetimepicker1").value; 
+													var datetimepicker2= document.getElementById("datetimepicker2").value;
+													// var checkbox= document.getElementById("checkbox").value;
+													if(document.getElementById('checkbox').checked) {
+														var checkbox=1;
+													} else {
+														var checkbox = 0;
+													}
+													
+													var message= document.getElementById("message").value;
+													var msgg= document.getElementById("id47");	
+													//alert("ooo1");
+													var xhr = new XMLHttpRequest();  
+													xhr.open("POST", "http://experiencemorocco.com/sending-weddings.php", true);
+													xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");                        
+													xhr.onreadystatechange = function () { 
+													if (xhr.readyState == 4 && xhr.status == 200) { 
+													// msgg.innerHTML = xhr.responseText;  
+													}                      
+													}        
+													// alert("ooo12");  
+													xhr.send("subject="+subject+"&email="+email+"&name="+name+"&number="+number+"&datetimepicker1="+datetimepicker1+"&datetimepicker2="+datetimepicker2+"&message="+message+"&checkbox="+checkbox);  
+													
+													// msgg.innerHTML = "processing...";
+													/*var name= document.getElementById("name").value='';
+													var email= document.getElementById("email").value='';	
+													var subject= document.getElementById("subject").value='';
+													var number= document.getElementById("number").value='';   
+													var datetimepicker1= document.getElementById("datetimepicker1").value=''; 
+													var datetimepicker2= document.getElementById("datetimepicker2").value='';  
+													var message= document.getElementById("message").value='';*/
+													}
+													
+													</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-43605136-23', 'experiencemorocco.com');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>

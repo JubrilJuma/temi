@@ -1,0 +1,936 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<title>Jewish Heritage Tour</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Welcome to Experience Morocco, a leading provider of curated and authentic travels across Morocco">
+<meta property="og:image" content="http://experiencemorocco.com/imagesNew/casa.jpg">
+<meta property="og:description" content="Welcome to Experience Morocco, a leading provider of curated and authentic travels across Morocco">
+
+<!-- 	|| START CSS FILES ||		-->
+<link rel="stylesheet" href="http://experiencemorocco.com/cssNew/bootstrap.css">
+<!-- <link rel="stylesheet" href="http://experiencemorocco.com/cssNew/global.css"> -->
+<link rel="stylesheet" href="http://experiencemorocco.com/cssNew/global-heritage.css">
+<link href="http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,500italic,700,700italic,900,900italic" rel="stylesheet" type="text/css">
+<link href="http://experiencemorocco.com/cssNew/jquery.datetimepicker.css" rel="stylesheet">
+<link href="http://experiencemorocco.com/cssNew/move.css" rel="stylesheet">
+<link rel="shortcut icon" type="image/x-icon" href="http://experiencemorocco.com/imgNew/favicon_experience.ico">
+
+<!--<link rel="stylesheet" type="text/css" href="cssNew/jquery.parascroll.css">-->
+
+<!-- 	|| START js FILES  ||		-->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://experiencemorocco.com/jsNew/parallax.js"></script>
+<script src="http://experiencemorocco.com/jsNew/bootstrap.js"></script>
+<script src="http://experiencemorocco.com/jsNew/jquery.backstretch.min.js"></script>
+<script type="text/javascript" src="http://experiencemorocco.com/jsNew/waypoints.min.js"></script>
+<script type="text/javascript" src="http://experiencemorocco.com/jsNew/script.js"></script>
+<script src="http://experiencemorocco.com/jsNew/validate.js" type="text/javascript"></script>
+<!-- Add mousewheel plugin (this is optional) -->
+	<script type="text/javascript" src="http://experiencemorocco.com/libNew/jquery.mousewheel-3.0.6.pack.js"></script>
+
+	<!-- Add fancyBox main JS and CSS files -->
+	<script type="text/javascript" src="http://experiencemorocco.com/source/jquery.fancybox.js?v=2.1.5"></script>
+	<link rel="stylesheet" type="text/css" href="http://experiencemorocco.com/source/jquery.fancybox.css?v=2.1.5" media="screen">
+
+	<!-- Add Button helper (this is optional) -->
+	<link rel="stylesheet" type="text/css" href="http://experiencemorocco.com/source/helpers/jquery.fancybox-buttons.css?v=1.0.5">
+	<script type="text/javascript" src="http://experiencemorocco.com/source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+
+	<!-- Add Thumbnail helper (this is optional) -->
+	<link rel="stylesheet" type="text/css" href="http://experiencemorocco.com/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7">
+	<script type="text/javascript" src="http://experiencemorocco.com/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+
+	<!-- Add Media helper (this is optional) -->
+	<script type="text/javascript" src="http://experiencemorocco.com/source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+
+<script type="text/javascript" src="http://experiencemorocco.com/jsNew/jquery.datetimepicker.js"></script>
+<script type="text/javascript" src="http://experiencemorocco.com/jsNew/scripts.js"></script>
+<script type="text/javascript" src="http://experiencemorocco.com/jsNew/move.js"></script>
+<script type="text/javascript" src="http://experiencemorocco.com/jsNew/jquery.scrollto.js"></script>
+
+<script src="https://www.google.com/recaptcha/api.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+    ///Code Scroll to hightlight menu
+/*$(window).scroll(function(){
+            var window_top = $(window).scrollTop() + 150; // the "12" should equal the margin-top value for nav.stick
+            var div_top = $('.navbar-header').offset().top;
+                if (window_top > div_top) {
+                    $('nav').addClass('stick');
+                } else {
+                    $('nav').removeClass('stick');
+                }
+        });*/
+        
+        
+        /**
+         * This part causes smooth scrolling using scrollto.js
+         * We target all a tags inside the nav, and apply the scrollto.js to it.
+         */
+        /*$("nav a").click(function(evn){
+            evn.preventDefault();
+            $('html,body').scrollTo(this.hash, this.hash); 
+        });
+        
+        
+        
+        /**
+         * This part handles the highlighting functionality.
+         * We use the scroll functionality again, some array creation and 
+         * manipulation, class adding and class removing, and conditional testing
+         */
+        var aChildren = $("nav li").children(); // find the a children of the list items
+        var aArray = []; // create the empty aArray
+        for (var i=0; i < aChildren.length; i++) {    
+            var aChild = aChildren[i];
+            var ahref = $(aChild).attr('href');
+            aArray.push(ahref);
+        } // this for loop fills the aArray with attribute href values
+        
+        $(window).scroll(function(){
+            var windowPos = $(window).scrollTop(); // get the offset of the window from the top of page
+            var windowHeight = $(window).height(); // get the height of the window
+            var docHeight = $(document).height();
+            
+            for (var i=0; i < aArray.length; i++) {
+                var theID = aArray[i];
+                var divPos = $(theID).offset().top; // get the offset of the div from the top of page
+                var divHeight = $(theID).height(); // get the height of the div in question
+                if (windowPos >= divPos && windowPos < (divPos + divHeight)) {
+
+                    $("a[href='" + theID + "']").addClass("nav-active");
+                } else {
+                    $('.navbar-nav li a').css("color",'#5b6064');
+                    $("a[href='" + theID + "']").removeClass("nav-active");
+                }
+            }
+            
+            if(windowPos + windowHeight == docHeight) {
+                if (!$("nav li:last-child a").hasClass("nav-active")) {
+                    var navActiveCurrent = $(".nav-active").attr("href");
+                    $("a[href='" + navActiveCurrent + "']").removeClass("nav-active");
+                    $("nav li:last-child a").addClass("nav-active");
+                }
+            }
+        });
+
+    ///Code Scroll to hightlight menu
+		$(window).scroll(function(){  
+		    posScroll = $(document).scrollTop();  
+		    if(posScroll >=550)   
+		        $('.scrollTo').fadeIn(600);  
+		    else  
+		        $('.scrollTo').fadeOut(600);  
+		});
+	}); 
+</script>
+<style type="text/css">
+/*Code added by Nabil*/
+.bottom-footer a {
+    width: 80px;
+    text-align: center;
+    display: inline-block;
+    margin-left: 11px;
+}
+.bottom-footer .img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+.copyright-text {
+    padding: 35px 10px;
+    margin: 0;
+}
+.copyright-photo{
+  background: url(http://experiencemorocco.com//imagesNew/cc.png) no-repeat;
+  position: absolute;
+  right: 4px;
+  bottom: 4px;
+  display: block;
+  color: white;
+  padding-left: 21px;
+}
+.copyright-photo:hover{
+  color:rgb(240, 90, 40);
+
+}
+.global-text-section .contact-form{
+  margin-bottom: 50px;
+}
+.nav-active{
+  color:rgb(240, 90, 40) !important;
+}
+/*End code added by Nabil*/	
+
+#carousel-1 .carousel-caption {
+  bottom: 0px;
+  top: 270px;
+    width: 71%;
+
+}
+					
+</style>
+</head>
+<body>
+
+
+	<section class="module parallax parallax-1">
+		<div id="fullPageSlide">
+			<div class="container-fluid">
+			
+			<div class="logo"><img class="" src="http://experiencemorocco.com/imgNew/logo-in-slide.png" alt=""></div>
+			
+			<!--	** START GLOABL CAROUSSEL FOR HOME PAGE **	 -->
+				<div id="carousel-1" class="carousel slide" data-ride="carousel" data-interval="20000" data-pause="false">
+					<!-- Indicators -->
+				  	<ol class="carousel-indicators">
+				    	<li data-target="#carousel-1" data-slide-to="0" class="active"></li>
+				    	<li data-target="#carousel-1" data-slide-to="1"></li>
+				    	<li data-target="#carousel-1" data-slide-to="2"></li>
+						<li data-target="#carousel-1" data-slide-to="3"></li>
+				    	<li data-target="#carousel-1" data-slide-to="4"></li>
+						<li data-target="#carousel-1" data-slide-to="5"></li>
+				    	<br><br>
+				    	<a id="arr-down" class=" hidden-phone" href="#AboutSection"><img src="http://experiencemorocco.com/imgNew/scroll-to-bottom.png"></a>
+				  	</ol>
+
+  					<!-- Wrapper for slides -->
+  					<div class="carousel-inner">
+					
+						<div class="item active">
+      						<img class="firstSlider" src="http://experiencemorocco.com/imagesNew/heritage--1.jpg" alt="">
+							
+							<div class="carousel-caption hidden-phone">
+        						<p style="position: relative;top: 60px;">Immerse yourself into the rich and colorful world of Moroccan Jewish Heritage, a tribute to the great saints, scholars and artists treasured for centuries.</p>
+      						</div>
+							
+						<!--<a class="copyright-photo" target="_blank" href="https://www.flickr.com/photos/nuino/15550604360/">Hamza Nuino</a>-->
+    					</div>
+						
+    					<div class="item ">
+      						<img class="firstSlider" src="http://experiencemorocco.com/imagesNew/heritage--2.jpg" alt="">
+      						<div class="carousel-caption hidden-phone">
+        						<p>Explore historic synagogues and pilgrimage sites honoring great Rabbis across the ages.</p>
+      						</div>
+						<!--<a class="copyright-photo" target="_blank" href="https://www.flickr.com/photos/jennyellenbrown/8510131719">Jenny Brown</a>-->
+    					</div>
+    					<div class="item">
+      						<img class="firstSlider" src="http://experiencemorocco.com/imagesNew/heritage--3.jpg" alt="">
+							<div class="carousel-caption hidden-phone">
+        						<p>Celebrate a Hiloula, before savouring a deliciously traditional Moroccan Shabbat dinner.</p>
+      						</div>					
+    					</div>
+    					<div class="item">
+      						<img class="firstSlider" src="http://experiencemorocco.com/imagesNew/heritage--4.jpg" alt="">
+							<div class="carousel-caption hidden-phone">
+        						<p>Visit monuments to the memory of saints, scholars and authors including Ibn Danān, Berdugo, Chalom Zaoui, and many others</p>
+      						</div>
+    					</div>
+						
+						<div class="item">
+      						<img class="firstSlider" src="http://experiencemorocco.com/imagesNew/heritage--5.jpg" alt="">
+							<div class="carousel-caption hidden-phone">
+        						<p style="position: relative;top: 50px;">Moroccan Hospitality will take on its true meaning as you take up residence in luxurious riads where traditional Moroccan architecture combines with all of the comforts of Jewish tradition for an unforgettable stay.</p>
+      						</div>
+						<!--<a class="copyright-photo" target="_blank" href="https://www.flickr.com/photos/pejmanphotos/3046056356">Pejman Parvandi</a>-->
+    					</div>
+						
+						<div class="item">
+      						<img class="firstSlider" src="http://experiencemorocco.com/imagesNew/heritage--6.jpg" alt="">
+							<div class="carousel-caption hidden-phone">
+        						<p style="position: relative;top: 100px;">Navigate the historic Jewish quarters (Mellahs) in imperial cities all throughout the trip and revel in the colorful rush of the old city souks</p>
+      						</div>
+						<!--<a class="copyright-photo" target="_blank" href="https://www.flickr.com/photos/pejmanphotos/3046056356">Pejman Parvandi</a>-->
+    					</div>
+  					</div>
+				<!-- Controls -->
+  							<a class="left carousel-control" href="#carousel-1" role="button" data-slide="prev"></a>
+  							<a class="right carousel-control" href="#carousel-1" role="button" data-slide="next"></a>
+				</div>
+			<!--	** END GLOABL CAROUSSEL FOR HOME PAGE **	 -->
+			</div>
+		</div>
+    </section>
+<script>
+$(document).on('click.nav','.navbar-collapse.in',function(e) {
+    if( $(e.target).is('a') || $(e.target).is('button')) {
+        $(this).collapse('hide');
+    }
+});
+</script>
+   	<section class="module content menu">
+        <div class="header">
+        	<div class="navbar navbar-default" role="navigation">
+      			<div class="container">
+        			<div class="navbar-header">
+          				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+            				<span class="sr-only">Toggle navigation</span>
+            				<span class="icon-bar"></span>
+            				<span class="icon-bar"></span>
+            				<span class="icon-bar"></span>
+          				</button>
+          				<a class="navbar-brand dropdown-toggle" href="#"><img src="http://experiencemorocco.com/imagesNew/logo.png" alt="logo-Experience Morocco" title="Experience Morocco"></a>
+        			</div>
+        			<div class="navbar-collapse collapse">
+					<nav class=" hidden-phone">
+          				<ul class="nav navbar-nav hidden-phone" style="position: relative;right: 100px;">
+            				<li><a href="#AboutSection">About the trip</a></li>
+							<li><a href="#destinationSection">Destinations</a></li>
+							<!--<li><a href="#FoodieHighlights">Foodie Highlights</a></li>-->
+							
+            				<li><a href="#contactSection">Contact Us</a></li>
+							
+							<!--li><a href="#" class="socialfb"></a></li>
+							<li><a href="#" class="socialtw"></a></li>
+							<li><a href="#" class="socialinst"></a></li-->
+          				</ul>
+						</nav> 
+<!-----------------------------Menu responsive------------------------------------------------------------>
+<nav id="fixed-top-navigation" class="pull-right hidden-desktop hidden-tablet">
+							<!-- MENU FOR MOBILE DEVICES -->
+							<div id="menu-mobile" class="hidden-md hidden-lg">
+								<div class="dropdown current">
+								  <i class="icon-reorder"></i>
+								  
+								  <ul class="dropdown-toggle" role="menu" aria-labelledby="dropdownMenu1">
+									<li><a href="#AboutSection">About the trip</a></li>
+									<li><a href="#destinationSection">Destinations</a></li>
+									<!--<li><a href="#FoodieHighlights">Foodie Highlights</a></li>-->
+									
+									<li><a href="#contactSection">Contact Us</a></li>
+								  </ul>
+								</div>
+							</div>
+						</nav>
+<!--------------------------------End Menu responsive------------------------------------------------------------>
+						<div class="reseauS hidden-phone hidden-tablet" style="position: absolute;right: 0px;top: 30px;">
+							<a href="https://www.facebook.com/expmorocco/" target="_blank" class="socialfb">
+							<img width="35" src="http://experiencemorocco.com//imagesNew/reseau/fb-hover.png" onmouseover="src='http://experiencemorocco.com/imagesNew/reseau/fb.png'" onmouseout="src='http://experiencemorocco.com/imagesNew/reseau/fb-hover.png'"></a>
+							
+							<a href="http://instagram.com/experiencemorocco/" target="_blank" class="socialinst">
+							<img width="35" src="http://experiencemorocco.com//imagesNew/reseau/inst-hover.png" onmouseover="src='http://experiencemorocco.com/imagesNew/reseau/inst.png'" onmouseout="src='http://experiencemorocco.com/imagesNew/reseau/inst-hover.png'"></a>
+						</div>
+<!--------------------------------End Menu responsive------------------------------------------------------------>
+        			</div><!--/.nav-collapse -->
+      			</div>
+    		</div>
+        </div>
+      </section>
+
+    <div id="first-bg" class="parallax-window hidden-phone" data-parallax="scroll" data-image-src="http://experiencemorocco.com/imagesNew/background-heritage-1.jpg" data-natural-width="1600" data-natural-height="470" data-bleed="10" data-speed="0.7">
+	  </div>
+	  <div id="first-bg" class="background-fix hidden-desktop">
+		<img src="http://experiencemorocco.com/imagesNew/background-heritage-1.jpg" style="height: 100%;width: 100%;">
+	  </div>
+      <section id="AboutSection" class="module content">
+	  
+        <div class="container">
+        	<div class="row">
+        		<h2>Jewish Heritage Tour</h2>
+        		<div id="first" class="global-text-section">
+        			<div class="col-md-6 transparent" id="left-text-section-1">
+        				<p>We invite you to join a once-in-a-lifetime discovery of Morocco through its Jewish Heritage, a tale of times gone by and of which the beauty still lingers. The Jewish community in Morocco dates back to 587 BCE and ever since then, Sephardic traditions have been proud components of Moroccan culture. The memory of such heritage is treasured in a variety of ways from the historic Jewish neighborhoods in Rabat and Fes to the synagogues that are still active in Marrakech, Essaouira, and Casablanca. Celebrate Morocco’s exotic atmosphere, delicious cuisine, beautiful landscapes, and picturesque souqs, as they tie in with great Jewish traditions and community.</p><br>
+        		</div>
+				</div>
+        	</div>
+        </div>
+      </section>
+	  
+	  <div class="parallax-window hidden-phone" data-parallax="scroll" data-image-src="http://experiencemorocco.com/imagesNew/background-heritage-2.jpg" data-natural-width="1600" data-natural-height="470" data-bleed="10" data-speed="0.7">
+	  </div>
+	  <div class="background-fix  hidden-desktop">
+		<img src="http://experiencemorocco.ma/imagesNew/background-heritage-2.jpg" style="height: 100%;width: 100%;">
+	  </div>
+
+      <script>
+$('a.zoom').fancybox({
+'titlePosition' : 'inside'
+});
+</script>
+	  <section id="destinationSection" class="module content">
+	  
+        <div class="container">
+        	<div class="row">
+        		<h2>Destinations</h2>
+        		<div id="carousel-3" class="carousel slide" data-ride="carousel">
+  					<!-- Wrapper for slides -->
+  					<div class="carousel-inner">
+    					<div class="item active">      						
+				<div class="col-md-6">      							
+				<div class="imgSlider">      								
+				<img src="http://experiencemorocco.com/imagesNew/mini-casa-heritage.jpg" alt="">									      								
+				<a class="zoom fancybox" href="http://experiencemorocco.com/imagesNew/casa-heritage"></a>																		      							
+				</div>      						
+				</div>      						
+				<div class="col-md-6">      							
+				<div class="text-in-slide">      								
+				<h3>Casablanca</h3>      								
+				<p>The synagogues, cemeteries, monuments and communal institutions of Casablanca show how important the city has been to the Jewish community during the twentieth century.
+				Casablanca is also home to some of Morocco’s richest nightlife and we’ll make sure to show you around its vibrant atmosphere.</p>      								
+				<!--p>Departure Dates: TBD<br>
+				Price: $3600 per person for 9 days/ 8 nights, and $5400 per person for 13 days/ 12 nights.<br>Prices are in double accommodation and do not include airfare to/ from Morocco.</p-->
+				
+				</div>      						
+				</div>      						    					
+				</div>    					    					
+				<div class="item">      						
+				<div class="col-md-6">      							
+				<div class="imgSlider">      								
+				<img src="http://experiencemorocco.com/imagesNew/mini-rabat-heritage.jpg" alt="">
+				<a class="zoom fancybox" href="http://experiencemorocco.com/imagesNew/rabat-heritage.jpg"></a>      						
+				</div>      						
+				</div>      						
+				<div class="col-md-6">      							
+				<div class="text-in-slide">      								
+				<h3>Rabat</h3>      								
+				<p>Navigate the winding alleyways of the Chellah and Kasbah of Oudayas, were sky-blue houses and Mediterranean gardens meet the lingering memory of Sephardic traditions. Then visit the Mellah and its lively courtyards, where many Jewish families are settled. The region is also home to Rabbi Hayyim Ben Moses Attar, the famous 18th century scholar and cabbalist.</p>										
+				<!--p><i>Transportation will also be available from the Casablanca airport </i></p>  	
+				<p style="line-height: 20px;"><span style="color:#FFB08B;">Yogi Moment </span>: Embrace the spirit of Marrakech’s warmth with an introductory Pranayama Meditation under the stars, and a foot massage to relax you from your flight.</p-->				
+				</div>      						
+				</div>          					
+				</div>    											
+				<div class="item">      						
+				<div class="col-md-6">      							
+				<div class="imgSlider">      								
+				<img src="http://experiencemorocco.com/imagesNew/mini-fes-heritage.jpg" alt="">      								
+				<a class="zoom fancybox" href="http://experiencemorocco.com/imagesNew/fes-heritage.jpg"></a>      							</div>      						
+				</div>      						
+				<div class="col-md-6">      							
+				<div class="text-in-slide">      								
+				<h3>Fes </h3>      								
+				<p>Fes is very rich in medieval Jewish history and at one time, the Mellah housed over 10,000 people and 40 synagogues. The city was the home of one of the all time's most influential Talmudic scholars, Rabbi Isaac Alfasi, as well as of Maimonides in the years 1160 to 1165. Key highlights of Fes include a walking tour of the old Medina where you can visit local craftsmen in their workshops as they weave, embroider and carve with techniques unchanged for centuries.</p>      								
+				<!--p><i>Accommodation: Sofitel Essaouira Mogador Golf & Spa</i></p>				      							
+				<p style="line-height: 20px;"><span style="color:#FFB08B;">Yogi Moment </span>: Enjoy a Yin Yoga and intention setting evening by the pool</p-->			
+				
+				</div>      						
+				</div>          					
+				</div>												
+				<div class="item">      						
+				<div class="col-md-6">      							
+				<div class="imgSlider">      								
+				<img src="http://experiencemorocco.com/imagesNew/mini-meknes-heritage.jpg" alt="">      								
+				<a class="zoom fancybox" href="http://experiencemorocco.com/imagesNew/meknes-heritage.jpg"></a>      							</div>      						
+				</div>      						
+				<div class="col-md-6">      							
+				<div class="text-in-slide">      								
+				<h3>Meknes</h3>      								
+				<p>Known for its imposing imperial doors, Meknes is also a site of importance for Moroccan Jews. The heart of the city houses eight synagogues proudly adorned by Hebrew epitaphs from The 19th Century. The medina also features a display of ancient handcrafted Torahs and Talmuds.</p>									
+				<!--p><i>Accommodation: Sofitel Essaouira Mogador Golf & Spa</i></p>      							
+				<p style="line-height: 20px;"><span style="color:#FFB08B;">Gourmet Moment </span>: Tune in to your senses during your relaxing massage with a selection of oils from Orange Blossom, Lemon Verbena, Rose, and more…</p-->
+				</div>      						
+				</div>          					
+				</div>												
+				<div class="item">      						
+				<div class="col-md-6">      							
+				<div class="imgSlider">      								
+				<img src="http://experiencemorocco.com/imagesNew/mini-trip-heritage.jpg" alt="">      								
+				<a class="zoom fancybox" href="http://experiencemorocco.com/imagesNew/trip-heritage.jpg"></a>   
+				</div>      						
+				</div>      						
+				<div class="col-md-6">      							
+				<div class="text-in-slide">      								
+				<h3>The Gates of the Sahara</h3>      								
+				<p>With its ancient and colorful Jewish quarter, the town of Tinghir offers you a glimpse into Ancestral Moroccan Jewry. Take a 4X4 ride to Merzouga for a sunset over the dunes, a berber dinner and overnight in bivouac, or return back to Erfoud for dinner and overnight at your comfy hotel room.</p>      								
+				 <!-- <p><i>Accommodation: Four Seasons or equivalent</i></p> -->		      							
+				<!--p style="line-height: 20px;"><span style="color:#FFB08B;">Yogi Moment </span>: Sunset practise in the Menara Gardens, at the gates of the Atlas Mountains</p-->
+				</div>      						
+				</div>          					
+				</div>												
+				<div class="item">      						
+				<div class="col-md-6">      							
+				<div class="imgSlider">      								
+				<img src="http://experiencemorocco.com/imagesNew/mini-marrakech-heritage.jpg" alt="">      								
+				<!--a class="zoom fancybox" href="http://experiencemorocco.com/imagesNew/img-slide-zoom-in5.jpg"></a-->																		
+				<a class="zoom fancybox" href="http://experiencemorocco.com/imagesNew/marrakech-heritage.jpg" title=""></a>									      							</div>      						
+				</div>      						
+				<div class="col-md-6">      							
+				<div class="text-in-slide">      								
+				<h3>Marrakech</h3>      								
+				<p>Marrakech combines two pulsating cities into one - where modern culture sits just the other side of 11th Century walls. The city tour will include the former and current synagogues within the mellah, and Jema El Fna Square, which houses an array of food, snake charmers, local live music performers and fortune-tellers.</p>				      							
+				<!-- <p><i>Accommodation: Four Seasons or equivalent</i></p> -->
+				<!--p style="line-height: 20px;"><span style="color:#FFB08B;">Yogi Moment </span>: “Mindfulness of the body” meditation </p-->
+				</div>      						
+				</div>          					
+				</div>												
+														
+				<div class="item">      						
+				<div class="col-md-6">      							
+				<div class="imgSlider">      								
+				<img src="http://experiencemorocco.com/imagesNew/mini-essaouira-heritage.jpg" alt="">      								
+				<a class="zoom fancybox" href="http://experiencemorocco.com/imagesNew/essaouira-heritage.jpg"></a>      							</div>      						
+				</div>      						
+				<div class="col-md-6">      							
+				<div class="text-in-slide">      								
+				<h3>Essaouira</h3>      								
+				<p>Essaouira is widely-known for its windswept beaches, but we also celebrate this seaside village for its multicultural history. Home to Rabbi Haim Pinto, Essaouira’s Jewish legacy can be felt through its well-preserved synagogue, a historic and religious site dating back to the early 18th century. Revel in the charm of Essaouira’s hand painted houses, take in the fresh seafood from the port, and roam around the many artist galleries that dot the city’s medina.</p>										
+				<!-- <p><i>Accommodation: Four Seasons or equivalent</i> </p> -->      							
+				<!--p style="line-height: 20px;"><span style="color:#FFB08B;">Yogi Moment </span>: Meditation by the beach with an invigorating sampling of organic Argan oils</p-->
+				</div>   
+				</div>          					
+				</div>
+						
+  					</div>
+  					<!-- Controls -->
+  							<a class="left carousel-control" href="#carousel-3" role="button" data-slide="prev"></a>
+  							<a class="right carousel-control" href="#carousel-3" role="button" data-slide="next"></a>
+				</div>
+        	</div>
+        </div>
+      </section>
+      
+      <div class="parallax-window hidden-phone hidden-tablet" data-parallax="scroll" data-image-src="http://experiencemorocco.com/imagesNew/background-heritage-3.jpg" data-natural-width="1600" data-natural-height="470" data-bleed="10" data-speed="0.7">
+	  </div>	
+<!-----------updated by ali------------------------------------------->
+	<div class="background-fix  section-4 hidden-desktop">
+		<img src="http://experiencemorocco.ma/imagesNew/background-heritage-3.jpg" style="height: 100%;width: 100%;">
+	  </div>	  
+<!-----------updated by ali------------------------------------------->
+
+
+<!---------------------------------06-07-2015----------------------------------------------------->
+
+
+<section id="FoodieHighlights" class="module content">
+	  
+        <div class="container">
+        	<div class="row">
+        		<h2>Sites of Interest</h2>
+        		<div id="carousel-4" class="carousel slide" data-ride="carousel">
+  					<!-- Wrapper for slides -->
+  					<div class="carousel-inner">
+    					<div class="item active">      						
+				<div class="col-md-6">      							
+				<div class="imgSlider">      								
+				<img src="http://experiencemorocco.com/imagesNew/mini-mellah2-heritage.jpg" alt="">									      								
+				<a class="zoom fancybox" href="http://experiencemorocco.com/imagesNew/mellah2-heritage.jpg"></a>																		      							
+				</div>      						
+				</div>      						
+				<div class="col-md-6">      							
+				<div class="text-in-slide">      								
+				<h3>The Mellah</h3>      								
+				<p>A Mellah (From Hebrew מלח or "salt") is the traditional Jewish quarter in a Moroccan city, surrounded by a fortified gateway. Jewish population took residence in Mellahs in the 15th century. With the arrival of the Europeans at the end of the 19th century, the Mellahs opened the gateways to new economical and social possibilities for the Moroccan Jews. To this day, Mellahs feature Kosher shops and restaurants, as well as craftsmen’s institutions passed on from generation to generation.</p>
+				
+				</div>      						
+				</div>      						    					
+				</div>    					    					
+				<div class="item">      						
+				<div class="col-md-6">      							
+				<div class="imgSlider">      								
+				<img src="http://experiencemorocco.com/imagesNew/mini-beth-heritage.jpg" alt="">      								
+				<a class="zoom fancybox" href="http://experiencemorocco.com/imagesNew/beth-heriatge.jpg"></a>      						
+				</div>      						
+				</div>      						
+				<div class="col-md-6">      							
+				<div class="text-in-slide">      								
+				<h3>The Temple Beth-El</h3>      								
+				<p>The Casablanca’s Beth-El synagogue is considered the centerpiece of a once vibrant Jewish community. Its stained glass windows and other artistic elements are a special testimony of Jewish Moroccan architecture. The Temple was fully renovated in 1997.</p>				
+				</div>      						
+				</div>          					
+				</div>    											
+				<div class="item">      						
+				<div class="col-md-6">      							
+				<div class="imgSlider">      								
+				<img src="http://experiencemorocco.com/imagesNew/mini-3-heritage.jpg" alt="">      								
+				<a class="zoom fancybox" href="http://experiencemorocco.com/imagesNew/3-heritage.jpg"></a>      							</div>      						
+				</div>      						
+				<div class="col-md-6">      							
+				<div class="text-in-slide">      								
+				<h3>The Museum of Moroccan Judaism of Casablanca</h3>      								
+				<p>Tucked into a quiet residential neighborhood of Casablanca, this museum holds a treasure trove of religious, ethnographic and artistic objects that demonstrate the history, traditions and daily life of Jews in Morocco.</p>
+				</div>      						
+				</div>          					
+				</div>												
+				<div class="item">      						
+				<div class="col-md-6">      							
+				<div class="imgSlider">      								
+				<img src="http://experiencemorocco.com/imagesNew/mini-solomon-heritage.jpg" alt="">      								
+				<a class="zoom fancybox" href="http://experiencemorocco.com/imagesNew/solomon-heritage.jpg"></a>      							</div>      						
+				</div>      						
+				<div class="col-md-6">      							
+				<div class="text-in-slide">      								
+				<h3>Saint Solomon Bel-Hench’s Tomb</h3>      								
+				<p>In the Ourika Valley village of Aghbalou, about a 30-minute drive of Marrakech, is the 500 year-old tomb of Solomon Bel-Hench, revered chief rabbi of Marrakech. Thousands of visitors visit the tomb annually, paying tribute to the ancient sage.</p>
+				</div>      						
+				</div>          					
+				</div>												
+				<div class="item">      						
+				<div class="col-md-6">      							
+				<div class="imgSlider">      								
+				<img src="http://experiencemorocco.com/imagesNew/mini-danan-heritage.jpg" alt="">      								
+				<a class="zoom fancybox" href="http://experiencemorocco.com/imagesNew/danan-heritage.jpg" title=""></a>   
+				</div>      						
+				</div>      						
+				<div class="col-md-6">      							
+				<div class="text-in-slide">      								
+				<h3>Rabbi Shlomo Ibn Danan Synagogue</h3>      								
+				<p>Built and founded by the Ibn Danan family, this synagogue and it’s mellah, located at the back of the building, used to be the largest in Morocco and once served a population of over 22,000 Sephardic devotees. The synagogue retains its notable interiors and original furnishings to this day.</p>
+				</div>      						
+				</div>          					
+				</div>												
+				<div class="item">      						
+				<div class="col-md-6">      							
+				<div class="imgSlider">      								
+				<img src="http://experiencemorocco.com/imagesNew/mini-volubilis-heritage.jpg" alt="">      								
+				<!--a class="zoom fancybox" href="http://experiencemorocco.com/imagesNew/img-slide-zoom-in5.jpg"></a-->																		
+				<a class="zoom fancybox" href="http://experiencemorocco.com/imagesNew/volubilis-heritage.jpg" title=""></a>									      							</div>      						
+				</div>      						
+				<div class="col-md-6">      							
+				<div class="text-in-slide">      								
+				<h3>The Roman Ruins of Volubilis</h3>      								
+				<p>The earliest epigraphic presence of Jews in Morocco comes from the  Second Century C.E. It consists essentially of inscriptions on tombstones found in the ruins of the Roman town of Volubilis, between Fez and Meknès, and another inscription discovered in Salé. The latter is in Greek, while one of the inscriptions of Volubilis is in Hebrew.</p>
+				</div>      						
+				</div>          					
+				</div>												
+														
+				<div class="item">      						
+				<div class="col-md-6">      							
+				<div class="imgSlider">      								
+				<img src="http://experiencemorocco.com/imagesNew/mini-karaouine-heritage.jpg" alt="">      								
+				<a class="zoom fancybox" href="http://experiencemorocco.com/imagesNew/karaouine-heritage.jpg"></a>      							</div>      						
+				</div>      						
+				<div class="col-md-6">      							
+				<div class="text-in-slide">      								
+				<h3>University of Al-Karaouine</h3>      								
+				<p>Al-Karaouine or Al-Qarawiyyin, is considered by the Guinness Book of Records, UNESCO and many historians as the oldest continuously operating, academic degree-granting university in the world.</p>
+				</div>   
+				</div>          					
+				</div>																							
+						
+  					</div>
+  					<!-- Controls -->
+  							<a class="left carousel-control" href="#carousel-4" role="button" data-slide="prev"></a>
+  							<a class="right carousel-control" href="#carousel-4" role="button" data-slide="next"></a>
+				</div>
+        	</div>
+        </div>
+      </section>
+
+
+
+
+ <div class="parallax-window hidden-phone hidden-tablet" data-parallax="scroll" data-image-src="http://experiencemorocco.com/imagesNew/background-heritage-4.jpg" data-natural-width="1600" data-natural-height="470" data-bleed="10" data-speed="0.7">
+	  </div>	
+<!-----------updated by ali------------------------------------------->
+	<div class="background-fix  section-4 hidden-desktop">
+		<img src="http://experiencemorocco.ma/imagesNew/background-heritage-4.jpg" style="height: 100%;width: 100%;">
+	  </div>	  
+<!-----------updated by ali------------------------------------------->
+
+<!---------------------------------06-07-2015----------------------------------------------------->
+
+
+<section class="module content content-2" id="travelSection">
+<style>
+.global-text-section .contact-form .form-group .send {
+  width: 95%;
+}
+</style>	  
+        
+      </section>
+
+	  
+	  	
+
+	  <div class="background-fix  hidden-desktop">
+		<img src="http://experiencemorocco.ma/imagesNew/background-heritage-5.jpg" style="height: 100%;width: 100%;">
+	  </div>
+	  
+      <section class="module content hidden-phone" id="">
+	  
+        <div class="container">
+        	<div class="row">
+        		<div class="global-text-section">
+	        		<h2>About Experience Morocco</h2>
+	        		<div id="fly-it" class="descriptionTravel">
+		        		<div class="content-travel-text transparent" id="Travel-text">
+		        			<p class="Travel">Experience Morocco is in the business of changing perspectives. We uncover experiences that open our guests’ points of view about our country and invite them to build a lasting connection with our home. By traveling with our guests, we travel within ourselves to find new ways of enriching Moroccan traditions with influences from around the world.</p><br>
+							<p class="Travel">As a leading provider of curated and authentic travels across Morocco and with a diverse team of travel professionals who speak 16 languages, we have the experience and know-how to design memorable trips custom-built around your objectives. We offer genuine cultural adventures that go beyond the typical tourist circuits to give you a nuanced understanding of our culture in all its beauty and intricacy.</p><br>
+							<p class="Travel">For more information about us and the trips that we are organizing, please visit: <a href="http://www.experiencemorocco.com" style="color: #ef5a28;  text-decoration: none;">www.experiencemorocco.com</a> </p><br>
+		        		</div>
+					</div>
+				</div>
+        	</div>
+        </div>
+      </section>
+
+      <div class="parallax-window hidden-phone hidden-tablet" data-parallax="scroll" data-image-src="http://experiencemorocco.com/imagesNew/background-heritage-6.jpg" data-natural-width="1600" data-natural-height="470" data-bleed="10" data-speed="0.7">
+	  </div>
+	   
+	  <!-----------updated by ali------------------------------------------->
+	<div class="background-fix   hidden-phone hidden-desktop">
+		<img src="http://experiencemorocco.ma/imagesNew/background-heritage-6.jpg" style="height: 100%;width: 100%;">
+	  </div>	  
+<!-----------updated by ali------------------------------------------->
+
+<!--section class="module content hidden-phone" id="">
+	  
+        <div class="container">
+        	<div class="row">
+        		<div class="global-text-section">
+	        		<h2>About Marrakech</h2>
+	        		<div id="fly-it" class="descriptionTravel">
+		        		<div class="content-travel-text" id="Travel-text">
+		        			<p class="Travel">Marrakech is two pulsating cities in one - where modern culture sits just the other side of 11th Century walls. And all this endearing commotion is surrounded by quiet Berber villages in the Atlas mountains just a stone’s throw away.<br>							
+							Within the traditional Medina walls, a heavy door is discreetly ajar among the ancient facades of the old town…opening onto one of the most beautiful riads of Marrakech. Also referred to as an oasis of calm and tranquility, a riad is a historic house remodeled to host its guest in a modern idyllic atmosphere.</p><br />
+							<p class="Travel">You’ll revel in the colorful rush of the city souks, be inspired by the breathtaking views of the Atlas Mountains, and moved by the gentle and warm hospitality of the artisans, chefs, and guides who will make sure your experience is one to remember.</p><br />
+							<br />
+		        		</div>
+					</div>
+				</div>
+        	</div>
+        </div>
+      </section-->
+
+      <!--div class="parallax-window hidden-phone hidden-tablet" data-parallax="scroll" data-image-src="http://experiencemorocco.com/imagesNew/background-yoga-7.jpg" data-natural-width="1600" data-natural-height="470" data-bleed="10" data-speed="0.7" >
+	  </div-->
+	   
+	  <!-----------updated by ali------------------------------------------->
+	<!--div class="background-fix   hidden-phone hidden-desktop">
+		<img src="http://experiencemorocco.ma/imagesNew/background-yoga-7.jpg" style="height: 100%;width: 100%;">
+	  </div-->	  
+<!-----------updated by ali------------------------------------------->
+
+      <section id="contactSection" class="module content" style="padding-bottom: 0;">
+	  
+        <div class="container">
+        	<div class="row">
+        		<div class="global-text-section">
+	        		<h2>Get in Touch<a class="scrollTo hidden-phone" href="#fullPageSlide"><img src="http://experiencemorocco.com/imagesNew/scroll-to-top.png" alt=""></a></h2>
+					
+	        		<p class="Travel">Ready to start planning a trip? Please fill out this form to get in touch with a travel specialist. If you would like to speak to a member of our team immediately, you can also call us at <span style="color: #ef5a28;">+1 646 249 8881</span> .We look forward to hearing from you and having you at Experience Morocco!</p>
+					
+					
+	        		<div class="contact-form">
+	        			<form id="form2" class="form-horizontal ws-validate" action="" method="POST">
+	        				<div class="form-group">
+					        	<div class="col-xs-12">
+					            	<input name="name" type="text" class="form-control" id="name" placeholder="Name *" data-errormessage-value-missing="Please fill out all of the fields to get in touch!" required>
+					            </div>
+					    	</div>
+					        <div class="form-group">
+					        	<div class="col-xs-12">
+					            	<input name="email" type="email" class="form-control" id="email" placeholder="Email Address *" data-errormessage-type-mismatch="Please enter a valid email address" data-errormessage-value-missing="Please fill out all of the fields to get in touch!" required>
+					            </div>
+					        </div>
+					        <div class="form-group">					            
+					            <div class="col-xs-12">
+					            	<input name="subject" type="text" class="form-control" id="subject" placeholder="Subject *" data-errormessage-value-missing="Please fill out all of the fields to get in touch!" required>
+					            </div>
+					        </div>
+					        <div class="form-group">
+								<div class="col-xs-12">
+								<select name="number" type="select" class="form-control" id="number" placeholder="Number of travellers *" required style="text-indent: 50px;" data-errormessage-value-missing="Please fill out all of the fields to get in touch!">	
+										<option value="">Number of Travelers</option>
+										<option value="0-10">0-10</option>
+										<option value="10-20">10-20</option>
+										<option value="20-30">20-30</option>
+										<option value="30-40">30-40</option>
+										<option value="40+">40+</option>
+									</select>
+					            </div>
+					         </div>
+					         <div class="form-group">
+					            <div class="col-xs-12">
+					            	<label id="forDate">Target Travel Dates *</label>
+					            </div>
+					         </div>
+
+					         <div class="form-group">   
+					            <div class="col-xs-12">
+					            	<div class="col-xs-5">
+					            		<input id="datetimepicker1" name="StartDate" type="text" class="form-control" data-errormessage-value-missing="Please fill out all of the fields to get in touch!" required>
+					            	</div>
+					            	<div class="col-xs-2">
+					            		<label id="forDate2">To</label>
+					            	</div>
+					            	<div class="col-xs-5">
+					            		<input id="datetimepicker2" name="EndDate" type="text" class="form-control" data-errormessage-value-missing="Please fill out all of the fields to get in touch!" required>
+					            	</div>      	
+					            </div>
+					          </div>
+					          <div class="form-group"> 
+								<div class="col-xs-12">
+					                <textarea rows="3" class="form-control" id="message" name="message" placeholder="Message" data-errormessage-value-missing="Please fill out all of the fields to get in touch!" required></textarea>
+					            </div>
+					           </div>
+					            <div class="form-group">					           
+					           		<div class="col-xs-offset-1 col-xs-10 col-xs-offset-1">
+					                	<label id="forNews" class="checkbox-inline">
+					                    	<input type="checkbox" name="checkbox" id="checkbox"> Add me to the Experience Morocco heritage mailing list.
+					                	</label><br><br>
+					            	</div>
+					           </div> 							   							   <div class="form-group"> 														<div class="col-xs-12">																	<div class="g-recaptcha" data-sitekey="6LfNugUTAAAAACxAwDHqmsDV6GwZtCgyU0FwjS4X" required></div>					            </div>													           </div>
+					           <div class="form-group">					           
+					           		<div class="col-xs-offset-1 col-xs-10 col-xs-offset-1">
+					                	<input type="submit" class="btn btn-primary send" value="Send" name="subm" id="buttonsub">
+					            	</div>
+					           </div>
+	        			</form>
+						 <span class="messageSucces" style="display:none;color:rgb(240, 90, 40);">Thanks for reaching out, we'll be in touch soon!</span>
+						 
+						 <span class="messageError" style="display:none;color:rgb(240, 90, 40);">Please fill out all of the fields to get in touch!</span>
+	        		</div>
+				</div>
+        	</div>
+        	<footer class="bottom-footer">
+            <div class="container">
+                <div class="copyright-container">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <p class="copyright-text">©Copyright 2018, All Rights Reserved</p>
+                        </div>
+                        <div class="col-sm-8">
+                            <a href="https://www.zicasso.com/luxury-tours/morocco/vacation-package-travel-agency" target="_blank"><img src="./dist/images/Zicasso.png" class="img-fluid" alt="Responsive image"></a>
+                            <a href="http://www.lemiami.com/about/" target="_blank"><img src="./dist/images/LE.png" class="img-fluid" alt="Responsive image"></a>
+                            <a href="https://www.iglta.org/experience-morocco/" target="_blank"><img src="./dist/images/IGLTA.jpg" class="img-fluid" alt="Responsive image"></a>
+                            <a href="https://www.iltm.com/" target="_blank"><img src="./dist/images/ILTM.png" class="img-fluid" alt="Responsive image"></a>
+                        </div>
+                </div>
+            </div>
+        </div></footer>
+        </div>
+      </section>
+<script>
+var today = new Date();
+var dd = today.getDate();
+var mm = today.getMonth()+1; //January is 0!
+var yyyy = today.getFullYear();
+
+if(dd<10) {
+    dd='0'+dd
+} 
+
+if(mm<10) {
+    mm='0'+mm
+} 
+
+today = dd+'/'+mm+'/'+yyyy;
+$('#datetimepicker1').datetimepicker({
+dayOfWeekStart : 1,
+lang:'fr',
+startDate:	today,
+});
+$('#datetimepicker1').datetimepicker({
+	value: today,
+	step:10,
+	lang:'fr',
+	timepicker:false,
+	format:'d/m/Y',
+	formatDate:'Y/m/d'
+});
+
+today = dd+'/'+mm+'/'+yyyy;
+$('#datetimepicker2').datetimepicker({
+dayOfWeekStart : 1,
+lang:'fr',
+startDate:	today,
+});
+$('#datetimepicker2').datetimepicker({
+	value: today,
+	step:10,
+	lang:'fr',
+	timepicker:false,
+	format:'d/m/Y',
+	formatDate:'Y/m/d'
+});
+</script>
+
+<script type="text/javascript">    
+
+function vmel(mail)		        {
+
+	var regExpm = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+	var email = mail.match(regExpm);
+	if (!email) return 0;
+	else return 1;
+	} 
+	function chmpv()		        {
+		
+		var alertTxt = "";
+		
+		for (i=0;i<7;i++)		            {
+			var x = document.forms['form2'].elements[i];
+			if(x.value==0 || x.value=='')		                {
+				alertTxt += "please fill in the " + x.name + " field \n"; break;
+				}	
+				else if(i==1){	
+				//alert("test" $x);
+								var vm=vmel(x.value);
+								
+ 								if(vm == 0){
+									alertTxt += "Please enter a valid email address \n"; 
+									break;
+									}
+									}
+									}
+									var grr= document.getElementById("g-recaptcha-response").value;	
+									
+									if(grr == '')	alertTxt += "Please enter a valid captcha text \n";	
+									return alertTxt;
+									}
+									$("#form2").submit(function(e){
+										e.preventDefault();	$(".messageError").fadeOut();
+										var alertTxt = chmpv();
+										if(alertTxt != "")    {
+											$(".messageError").text( alertTxt );
+											$(".messageError").fadeIn();
+											}	
+											else{
+												verif();
+												$(".messageSucces").fadeIn(); 
+												$(".messageSucces").fadeOut(13000);	}});
+												function verif()                 {
+													//alert("ooo");	
+													var name= document.getElementById("name").value;
+													var email= document.getElementById("email").value;	
+													var subject= document.getElementById("subject").value;
+													var number= document.getElementById("number").value;   
+													var datetimepicker1= document.getElementById("datetimepicker1").value; 
+													var datetimepicker2= document.getElementById("datetimepicker2").value;
+													// var checkbox= document.getElementById("checkbox").value;
+													if(document.getElementById('checkbox').checked) {
+														var checkbox=1;
+													} else {
+														var checkbox = 0;
+													}
+													
+													var message= document.getElementById("message").value;
+													var msgg= document.getElementById("id47");	
+													//alert("ooo1");
+													var xhr = new XMLHttpRequest();  
+													xhr.open("POST", "http://experiencemorocco.com/sending-heritage.php", true);
+													xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");                        
+													xhr.onreadystatechange = function () { 
+													if (xhr.readyState == 4 && xhr.status == 200) { 
+													// msgg.innerHTML = xhr.responseText;  
+													}                      
+													}        
+													// alert("ooo12");  
+													xhr.send("subject="+subject+"&email="+email+"&name="+name+"&number="+number+"&datetimepicker1="+datetimepicker1+"&datetimepicker2="+datetimepicker2+"&message="+message+"&checkbox="+checkbox);  
+													
+													// msgg.innerHTML = "processing...";
+													/*var name= document.getElementById("name").value='';
+													var email= document.getElementById("email").value='';	
+													var subject= document.getElementById("subject").value='';
+													var number= document.getElementById("number").value='';   
+													var datetimepicker1= document.getElementById("datetimepicker1").value=''; 
+													var datetimepicker2= document.getElementById("datetimepicker2").value='';  
+													var message= document.getElementById("message").value='';*/
+													}
+													
+													</script>
+<script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-43605136-23', 'experiencemorocco.com');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>
